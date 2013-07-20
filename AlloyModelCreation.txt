@@ -1,0 +1,11 @@
+The signatures for models are defined in source/proj1_model_creation.als
+
+The abstract sig are: 
+
+ValidateObj, which represents the object need to be validated when user input a new entry to the board. It is extended by Row, Column, and Square9 which have some of the same properties.
+
+Notification, which notifies the user there is either an error or InvalideMove when user make a new move. Errors and InvalideMove have the same property of notifing the user. 
+
+ValidValue, which defines a set of values which are validate for a ValidateObj for current status of the object. Two abstract signatures: ValidObjValue and ValidCellValue extends it. 
+
+ValidObjValue, which indicates the set of valid value for current ValidObj, in which has 9 cells. It is extended by three signatures: ValidColumnVal, ValidRowVal, and ValidSquareVal. They have the common property of containing 9 cells, and each cell should have a different value.
