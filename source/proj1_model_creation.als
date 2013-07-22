@@ -2,25 +2,13 @@ module sudoku/project1
 
 sig Board {}
 
-abstract sig ValidateObj {}
-sig Row extends ValidateObj {}
-sig Column extends ValidateObj {}
-sig Square9 extends ValidateObj {}
-sig Cell extends ValidateObj{}
+abstract sig ValidObj {}
+sig Row extends ValidObj {} // Indexed by Column
+sig Column extends ValidObj {} // Indexed by Row {(n1, n1), (n1,n2)}
+sig Square9 extends ValidObj {} // Indexed by Column, Row
+sig Cell extends ValidateObj{} // Indexed by Column, Row
 
-sig Player {}
-
-abstract sig Notification {}
-sig InvalideMove extends Notification {}
-abstract sig Errors extends Notification {}
-
-abstract sig ValidValue {}
-sig ValidCellValue extends ValidValue {}
-
-abstract sig ValidObjValue {}
-sig ValidColumnVal extends ValidObjValue {}
-sig ValidRowVal extends ValidObjValue {}
-sig ValidSquareVal extends ValidObjValue {}
+sig ValidValue extend ValidObj {} // set is all ValidObj - row - column - square
 
 pred show () {}
 run show
