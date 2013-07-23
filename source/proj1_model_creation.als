@@ -13,6 +13,11 @@ sig row
 	contents: set number
 }
 
+sig square9
+{
+	contents: set number
+}
+
 sig cell
 {
 	contents: set number
@@ -23,7 +28,8 @@ one sig board
 	cells: number -> number -> set cell,
 
 	rows: number -> set row,
-	columns: number -> set column
+	columns: number -> set column,
+	squares: number -> set square9
 }
 
 
