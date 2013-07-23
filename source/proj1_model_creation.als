@@ -20,22 +20,17 @@ sig cell
 
 one sig board
 {
-	cells: set cell,
+	cells: number -> number -> set cell,
 
-	rows: number -> row,
-	columns: number -> column
+	rows: number -> set row,
+	columns: number -> set column
 }
+
 
 fact everyRowIsInABoard
 {
 	all r: row, b: board, n: number | r in b.rows[n]
 }
-fact everyRowIsUnique
-{
-	one b: board | some n, n': number | b.rows[n] = b.rows[n'] implies n = n'
-}
-
-
 
 fact everyColumnIsInABoard
 {
@@ -46,3 +41,4 @@ pred show ()
 {
 }
 
+run show
