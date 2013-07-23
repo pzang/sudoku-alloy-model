@@ -25,13 +25,12 @@ sig cell
 
 one sig board
 {
-	cells: number -> number -> set cell,
+	cells: number -> number -> set cell, 
 
 	rows: number -> set row,
 	columns: number -> set column,
 	squares: number -> set square9
 }
-
 
 fact everyRowIsInABoard
 {
