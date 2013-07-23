@@ -1,26 +1,18 @@
-module sudoku/project1
+module sudoku/project
 
-sig Board {}
+// Run this. I think that it's closer to what we want
+abstract sig number {}
+one sig n1, n2, n3, n4, n5, n6, n7, n8, n9 extends number {}
 
-sig ValidVals {
-  val: set Int
-  }
+sig column 
+{
+  contents: set number
+}
 
-abstract sig ValidObj {
-  valide_values: ValidVals
-  index: Int
-  }
-
-
-sig Row extends ValidObj {} // Indexed by Column
-sig Column extends ValidObj {} // Indexed by Row {(n1, n1), (n1,n2)}
-sig Square9 extends ValidObj {} // Indexed by Column, Row
-
-sig Cell extends ValidObj{
-  index_y: Int
-  } // Indexed by Column, Row
-
-
+sig row 
+{
+	contents: set number
+}
 
 pred show () {}
-run show 9
+run show
