@@ -1,0 +1,37 @@
+GROUP 1Alloy Project – Part 1CS4710Greg Antrim, Joshua Barker, Peng Zeng7/20/2013
+
+
+
+
+1.0 - Problem Description
+Our goal is to model a Sudoku program. Our program will take in number in a square and determine if the number in that square is valid. A square is defined by its specific row and column coordinate pair. Users will enter one number at a time, and that number will be verified before the user is allowed to make another move. Our model will be based off of a 9 row by 9 column board.
+
+1.1 - Functionalities Provided
+1. 9x9 board
+a. board cannot be bigger or smaller
+b. Valid values will be pre-generated at random to create a semi unique puzzle each time the user plays.
+2. Valid Value Caluclation
+a. The value that the user is entering into the current row cannot already be present in that row.
+b. The value that the user is entering into the current column cannot already be present in that column.
+c. The value that the user is entering into the current 3x3 square cannot already be present in that 3x3 square.
+d. a, b, and c must all be true in order for the user to make their next move
+3. The following events will be reported to a user
+a. Invalid move
+b. Other errors
+
+1.2 - Functionalities Excluded
+1. Solving of the puzzle
+a. If users fills all squares puzzle will be correct since all moves are valid
+b. If user is unable to solve the puzzle a solution will not be provided to them.
+2. Time limit
+a. users have unlimited time to solve the puzzle
+3. Points system
+a. Points will not be tallied based on time or other criteria. 
+
+2.0 Abstraction
+There was only one abstraction necessary in our project and that was the number sig.  We chose to define “number” as abstract because we would later need to define nine different numbers n1-n9 to represent the nine rows and columns of the board. Rather than defining n1-n9 separately we chose to define them as an extension of number because while they represent different numbers they are similar in structure and will all fit under the number sig. 
+2.1 Relations and Multiplicities
+The abstract signature number is related to n1-n9 in that all nine of the row and column numbers are themselves a number. Each column, row, and square9 contains a set of  nine numbers n1-n9 that represents the column number, row number and square number respectively. A cell also contains two numbers which will be referred to as i and j which represents the row the cell is in (i), and the column the cell is in (j). Each board is made up of set of 81 cells. Each board has a set of 9 rows, a set of  9 columns and a set of 9 square9’s.
+
+2.2 Model Creation Steps
+Step1:
