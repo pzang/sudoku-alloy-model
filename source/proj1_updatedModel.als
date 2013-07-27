@@ -1,0 +1,70 @@
+module sudoku/project
+
+//nine columns
+abstract sig columns{}
+one sig c1, c2, c3, c4, c5, c6, c7, c8, c9 extends columns{}
+
+//nine rows
+abstract sig rows{}
+one sig r1, r2, r3, r4, r5, r6, r7, r8, r9 extends rows{}
+
+//nine 3x3 squares
+abstract sig threeByThreeSquares{}
+one sig s1, s2, s3, s4, s5, s6, s7, s8, s9 extends threeByThreeSquares{}
+
+//c ells can contain values 1-9 -> 9 possible values
+sig cellValues
+{
+	n1:Int, n2:Int, n3:Int, n4:Int, n5:Int, n6:Int, n7:Int, n8:Int, n9:Int
+}
+
+//each cell has a value, a row, column and 3x3 square #
+abstract sig cells
+{
+	val: cellValues,
+	columnNum: columns,
+	rowNum: rows,
+	squareNum: threeByThreeSquares
+}
+one sig r1c1, r1c2, r1c3, r1c4, r1c5, r1c6, r1c7, r1c8, r1c9,
+			 r2c1, r2c2, r2c3, r2c4, r2c5, r2c6, r2c7, r2c8, r2c9,
+			 r3c1, r3c2, r3c3, r3c4, r3c5, r3c6, r3c7, r3c8, r3c9,
+			 r4c1, r4c2, r4c3, r4c4, r4c5, r4c6, r4c7, r4c8, r4c9,
+			 r5c1, r5c2, r5c3, r5c4, r5c5, r5c6, r5c7, r5c8, r5c9,
+			 r6c1, r6c2, r6c3, r6c4, r6c5, r6c6, r6c7, r6c8, r6c9,
+			 r7c1, r7c2, r7c3, r7c4, r7c5, r7c6, r7c7, r7c8, r7c9,
+			 r8c1, r8c2, r8c3, r8c4, r8c5, r8c6, r8c7, r8c8, r8c9,
+			 r9c1, r9c2, r9c3, r9c4, r9c5, r9c6, r9c7, r9c8, r9c9 extends cells{}
+
+fact noSameValueInSameRowColumnOrSquare 
+{
+ 	no c1, c2: cells |
+		 c1.val != c2.val  && (c1.columnNum = c2.columnNum || c1.rowNum = c2.rowNum || c1.squareNum = c2.squareNum)
+}
+
+fact belowNine
+{
+	all c: cellValues | c.n1 <= 9 && c.n2 <= 9 && c.n3 <= 9 && c.n4 <= 9 && c.n5 <= 9 
+								&& c.n6 <= 9 && c.n7 <= 9 && c.n8 <= 9 && c.n9 <= 9
+}
+
+assert nineColumns
+{
+	all c: columns | #c=9
+}
+
+assert nineRows
+{
+	all r: rows |#r=9
+}
+
+assert nineSquares
+{
+	all s: threeByThreeSquares | #s=9
+}
+
+pred show () 
+{
+}
+
+run show for 9 columns, 9 rows, 9 threeByThreeSquares, 9 cellValues, 81 cells
