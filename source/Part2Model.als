@@ -12,7 +12,7 @@ abstract sig Group {
 abstract sig Row, Column, Matrix extends Group {}
 
 one sig SudokuBoard extends Group {
-  rows: set Row,
+	rows: set Row,
 	columns: set Column,
 	squares: set Matrix
 } 
@@ -21,6 +21,32 @@ one sig SudokuBoard extends Group {
 	columns = C0 + C1 + C2 + C3 + C4 + C5 + C6 + C7 + C8
 	squares = M11 + M14 + M17 + M41 + M44 + M47 + M71 + M74 + M77
 }
+/*
+fact {
+	SudokuBoard.cells = C00 + C01 + C02 + C03 + C04 + C05 + C06 + C07 + C08 + C10 + C11 + C12 + C13 + C14 + C15 + C16 + C17 + C18 + C20 + C21 + C22 + C23 + C24 + C25 + C26 + C27 + C28 + C30 + C31 + C32 + C33 + C34 + C35 + C36 + C37 + C38 + C40 + C41 + C42 + C43 + C44 + C45 + C46 + C47 + C48 + C50 + C51 + C52 + C53 + C54 + C55 + C56 + C57 + C58 + C60 + C61 + C62 + C63 + C64 + C65 + C66 + C67 + C68 + C70 + C71 + C72 + C73 + C74 + C75 + C76 + C77 + C78 + C80 + C81 + C82 + C83 + C84 + C85 + C86 + C87 + C88
+}
+*/
+
+// Begin Added Asserts
+// Begin Contents Assert
+assert boardRowsContainAllCells {
+	one board: SudokuBoard | board.rows.cells = Cell
+}
+
+assert boardColumnsContainAllCells {
+	one board: SudokuBoard | board.columns.cells = Cell
+}
+assert boardSquaresContainAllCells {
+	one board: SudokuBoard | board.squares.cells = Cell
+}
+// End Content Assert
+// Begin Cell Assert
+assert allCellsBelongToABoard {
+//	all cell: Cell | one board: SudokuBoard | cell in board.cells
+}
+// End Cell Assert 
+// End Added Asserts
+
 
 one sig
 C00, C01, C02, C03, C04, C05, C06, C07, C08,
