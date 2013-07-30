@@ -1,99 +1,63 @@
 module sudoku/project
 
-open util/integer as integer
+abstract sig number {}
+one sig n1, n2, n3, n4, n5, n6, n7, n8, n9 extends number {}
 
-sig number 
+abstract sig subContainer 
 {
-	n1:Int, n2:Int, n3:Int, n4:Int, n5:Int, n6:Int, n7:Int, n8:Int, n9:Int
+	contents: set number,
+	cells: set cell
 }
-
-sig column 
-{
-	contents: set number
-}
-
-sig row 
-{
-	contents: set number
-}
-
-sig square9
-{
-	contents: set number
-}
+	
+sig column, row, square9 extends subContainer {}
 
 sig cell
 {
-	contents: set number
+	contents: set number,
 }
 
 one sig board
 {
-	cells: number -> number -> set cell, 
+	cells: number -> number -> set cell,
 
 	rows: number -> set row,
 	columns: number -> set column,
 	squares: number -> set square9
 }
 
-fact everyRowIsInABoard
+
+fact everyRowColSqrAreInABoard
 {
 	all r: row, b: board, n: number | r in b.rows[n]
-}
-
-fact everyColumnIsInABoard
-{
 	all c: column, b: board, n: number | c in b.columns[n]
+	all s: square9, b: board, n: number | s in b.squares[n]
 }
-sig temp
+
+fact cellInCorrectPlace
 {
-	y:Int
-}
-fact allNumbersBetweenOneAndNine
-{ 
-	all x: number | x.n1<=9 && x.n2<=9   &&  x.n3<=9  &&  x.n4 <= 9  && x.n5 <= 9  && x.n6 <= 9  &&
-							 x.n7<=9  && x.n8<=9  &&  x.n9<=9 
+	all c: cell, r: row, b: board, n: number, m: number  |
+		(c = b.cells[m][n]  and r = b.rows[m] )=> c in r.cells 
+	all c: cell, co: column, b: board,m: number | some n: number |
+		(c = b.cells[m][n] and co = b.columns[n] ) => c in co.cells
+
+
 }
 
-fact numbersCantEqualEachother
+
+fact cellContentValidation
 {
-	all x: number | x.n1 != x.n2 && x.n1 != x.n3 && x.n1 != x.n4 && x.n1 != x.n5 && x.n1 != x.n6 && x.n1 != x.n7
-							&& x.n1 != x.n8 && x.n1 != x.n9
-	
-	all x: number | x.n2 != x.n3 && x.n2 != x.n4 && x.n2 != x.n5 && x.n2 != x.n6 && x.n2 != x.n7
-							 && x.n2 != x.n8 && x.n2 != x.n9
+	all c: cell, r: row, co: column, s: square9 | 
+	 (c in r.cells && c in co.cells && c in s.cells) => (c.contents = (r.contents & co.contents & s.contents))
 
-	all x: number | x.n3 != x.n4 && x.n3 != x.n5 && x.n3 != x.n6 && x.n3 != x.n7
-							&& x.n3 != x.n8 && x.n3 != x.n9
-
-	all x: number |  x.n4 != x.n5 && x.n4 != x.n6 && x.n4 != x.n7 && x.n4 != x.n8 && x.n4 != x.n9
-	
-	all x: number | x.n5 != x.n6 && x.n5 != x.n7 && x.n5 != x.n8 && x.n5 != x.n9
-
-	all x: number | x.n6 != x.n7 && x.n6 != x.n8 && x.n6 != x.n9
-
-	all x: number | x.n7 != x.n8 && x.n7 != x.n9
-
-	all x: number | x.n8!=x.n9
 }
 
-assert nineColumns
+
+pred show (r: row, co: column, s: square9, cc: cell, nn: number) 
 {
-	all c: column | #c<=9
+	some n: number | n in r.contents and n in co.contents and n not in cc.contents
+	some c, ce:cell |  c in r.cells and ce in r.cells
+	some c: cell | c in co.cells and c not in r.cells
+	some c: cell | c in co.cells and c in r.cells and c in s.cells
 }
 
-assert nineRows
-{
-	all r: row | #r<=9
-}
-
-assert eightyOneCells
-{
-	all c: cell | #c<=81
-}
-
-pred show () 
-{
-}
-
-run show
+run show 
