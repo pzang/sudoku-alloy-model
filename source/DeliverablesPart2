@@ -1,0 +1,52 @@
+1) Define at least two facts that should always be true in your model. Argue why you
+should not specify them as assertions. (20 points)
+
+one sig SudokuBoard extends Group {
+  rows: set Row,
+	columns: set Column,
+	squares: set Matrix
+} 
+{
+	rows = R0 + R1 + R2 + R3 + R4 + R5 + R6 + R7 + R8
+	columns = C0 + C1 + C2 + C3 + C4 + C5 + C6 + C7 + C8
+	squares = M11 + M14 + M17 + M41 + M44 + M47 + M71 + M74 + M77
+}
+
+The 3 facts here are used to define the addition of a board to the model and should be facts instead of assertions because they describe the structure of the model.
+
+2) Specify at least two assertions that you expect to be true. If the assertions fail,
+please visualize the counterexamples and try to fix your model so the assertions
+hold. (20 points)
+
+// Begin Added Asserts
+// Begin Contents Assert
+assert boardRowsContainAllCells {
+	one board: SudokuBoard | board.rows.cells = Cell
+}
+
+assert boardColumnsContainAllCells {
+	one board: SudokuBoard | board.columns.cells = Cell
+}
+assert boardSquaresContainAllCells {
+	one board: SudokuBoard | board.squares.cells = Cell
+}
+// End Content Assert
+// Begin Cell Assert
+assert noStrayBoardCells {
+	one board: SudokuBoard | board.squares.cells = board.rows.cells and 				board.squares.cells = board.columns.cells
+}
+// End Cell Assert 
+// End Added Asserts
+
+These assertions describe attributes that should hold based on our definition of the model.
+All cells should be in the board's rows and all cells should be in the board's columns and all cells should be in the boards squares.
+
+Also the cells inside of the rows should be the same cells inside of the columns and should be the same cells inside the squares.
+
+3
+
+4
+
+5
+
+6
