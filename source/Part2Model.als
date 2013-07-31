@@ -32,7 +32,7 @@ one sig board extends group
 
 // Begin Contents Assert
 
-all cells must be accounted for in the set of all rows
+//all cells must be accounted for in the set of all rows
 assert boardRowsContainAllCells 
 {
 	one board: board | board.rows.cells = cell
@@ -320,31 +320,31 @@ fun cellValue (b: board, c: cell): number
 // much like you would see in the newspaper
 pred partialGame 
 {
-  C01.content = Two
-  C02.content = Three
-  C05.content = Eight
-  C07.content = Five
-  C11.content = Eight
-  C13.content = Nine
-  C16.content = Four
-  C17.content = Seven
-  C23.content = Five
-  C31.content = Nine
-  C32.content = One
-  C34.content = Three
-  C43.content = Eight
-  C46.content = Five
-  C48.content = Six
-  C55.content = Four
-  C64.content = Six
-  C70.content = Seven
-  C72.content = Nine
-  C74.content = Eight
-  C78.content = Five
-  C80.content = Six
-  C85.content = Two
-  C86.content = Three
-  C88.content = Eight
+  C01.content = n2
+  C02.content = n3
+  C05.content = n8
+  C07.content = n5
+  C11.content = n8
+  C13.content = n9
+  C16.content = n4
+  C17.content = n7
+  C23.content = n5
+  C31.content = n9
+  C32.content = n1
+  C34.content = n3
+  C43.content = n8
+  C46.content = n5
+  C48.content = n6
+  C55.content = n4
+  C64.content = n6
+  C70.content = n7
+  C72.content = n9
+  C74.content = n8
+  C78.content = n5
+  C80.content = n6
+  C85.content = n2
+  C86.content = n3
+  C88.content = n8
 }
 
 pred solvePuzzle 
@@ -361,8 +361,8 @@ pred validCells
 
 pred show 
 {
-	generatePuzzle
+	partialGame
 
 }
-run generatePuzzle for 9
+run partialGame for 9
 

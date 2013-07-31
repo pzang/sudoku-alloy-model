@@ -1,0 +1,884 @@
+<alloy builddate="2012-09-25 15:54 EDT">
+
+<instance bitwidth="0" maxseq="0" command="Run Game2 for 9" filename="C:\Users\Greg\Documents\sudoku-alloy-model\source\Part2Model.als">
+
+<sig label="seq/Int" ID="0" parentID="1" builtin="yes">
+</sig>
+
+<sig label="Int" ID="1" parentID="2" builtin="yes">
+</sig>
+
+<sig label="String" ID="3" parentID="2" builtin="yes">
+</sig>
+
+<sig label="this/n1" ID="4" parentID="5" one="yes">
+   <atom label="n1$0"/>
+</sig>
+
+<sig label="this/n2" ID="6" parentID="5" one="yes">
+   <atom label="n2$0"/>
+</sig>
+
+<sig label="this/n3" ID="7" parentID="5" one="yes">
+   <atom label="n3$0"/>
+</sig>
+
+<sig label="this/n4" ID="8" parentID="5" one="yes">
+   <atom label="n4$0"/>
+</sig>
+
+<sig label="this/n5" ID="9" parentID="5" one="yes">
+   <atom label="n5$0"/>
+</sig>
+
+<sig label="this/n6" ID="10" parentID="5" one="yes">
+   <atom label="n6$0"/>
+</sig>
+
+<sig label="this/n7" ID="11" parentID="5" one="yes">
+   <atom label="n7$0"/>
+</sig>
+
+<sig label="this/n8" ID="12" parentID="5" one="yes">
+   <atom label="n8$0"/>
+</sig>
+
+<sig label="this/n9" ID="13" parentID="5" one="yes">
+   <atom label="n9$0"/>
+</sig>
+
+<sig label="this/number" ID="5" parentID="2" abstract="yes">
+</sig>
+
+<sig label="this/C00" ID="14" parentID="15" one="yes">
+   <atom label="C00$0"/>
+</sig>
+
+<sig label="this/C01" ID="16" parentID="15" one="yes">
+   <atom label="C01$0"/>
+</sig>
+
+<sig label="this/C02" ID="17" parentID="15" one="yes">
+   <atom label="C02$0"/>
+</sig>
+
+<sig label="this/C03" ID="18" parentID="15" one="yes">
+   <atom label="C03$0"/>
+</sig>
+
+<sig label="this/C04" ID="19" parentID="15" one="yes">
+   <atom label="C04$0"/>
+</sig>
+
+<sig label="this/C05" ID="20" parentID="15" one="yes">
+   <atom label="C05$0"/>
+</sig>
+
+<sig label="this/C06" ID="21" parentID="15" one="yes">
+   <atom label="C06$0"/>
+</sig>
+
+<sig label="this/C07" ID="22" parentID="15" one="yes">
+   <atom label="C07$0"/>
+</sig>
+
+<sig label="this/C08" ID="23" parentID="15" one="yes">
+   <atom label="C08$0"/>
+</sig>
+
+<sig label="this/C10" ID="24" parentID="15" one="yes">
+   <atom label="C10$0"/>
+</sig>
+
+<sig label="this/C11" ID="25" parentID="15" one="yes">
+   <atom label="C11$0"/>
+</sig>
+
+<sig label="this/C12" ID="26" parentID="15" one="yes">
+   <atom label="C12$0"/>
+</sig>
+
+<sig label="this/C13" ID="27" parentID="15" one="yes">
+   <atom label="C13$0"/>
+</sig>
+
+<sig label="this/C14" ID="28" parentID="15" one="yes">
+   <atom label="C14$0"/>
+</sig>
+
+<sig label="this/C15" ID="29" parentID="15" one="yes">
+   <atom label="C15$0"/>
+</sig>
+
+<sig label="this/C16" ID="30" parentID="15" one="yes">
+   <atom label="C16$0"/>
+</sig>
+
+<sig label="this/C17" ID="31" parentID="15" one="yes">
+   <atom label="C17$0"/>
+</sig>
+
+<sig label="this/C18" ID="32" parentID="15" one="yes">
+   <atom label="C18$0"/>
+</sig>
+
+<sig label="this/C20" ID="33" parentID="15" one="yes">
+   <atom label="C20$0"/>
+</sig>
+
+<sig label="this/C21" ID="34" parentID="15" one="yes">
+   <atom label="C21$0"/>
+</sig>
+
+<sig label="this/C22" ID="35" parentID="15" one="yes">
+   <atom label="C22$0"/>
+</sig>
+
+<sig label="this/C23" ID="36" parentID="15" one="yes">
+   <atom label="C23$0"/>
+</sig>
+
+<sig label="this/C24" ID="37" parentID="15" one="yes">
+   <atom label="C24$0"/>
+</sig>
+
+<sig label="this/C25" ID="38" parentID="15" one="yes">
+   <atom label="C25$0"/>
+</sig>
+
+<sig label="this/C26" ID="39" parentID="15" one="yes">
+   <atom label="C26$0"/>
+</sig>
+
+<sig label="this/C27" ID="40" parentID="15" one="yes">
+   <atom label="C27$0"/>
+</sig>
+
+<sig label="this/C28" ID="41" parentID="15" one="yes">
+   <atom label="C28$0"/>
+</sig>
+
+<sig label="this/C30" ID="42" parentID="15" one="yes">
+   <atom label="C30$0"/>
+</sig>
+
+<sig label="this/C31" ID="43" parentID="15" one="yes">
+   <atom label="C31$0"/>
+</sig>
+
+<sig label="this/C32" ID="44" parentID="15" one="yes">
+   <atom label="C32$0"/>
+</sig>
+
+<sig label="this/C33" ID="45" parentID="15" one="yes">
+   <atom label="C33$0"/>
+</sig>
+
+<sig label="this/C34" ID="46" parentID="15" one="yes">
+   <atom label="C34$0"/>
+</sig>
+
+<sig label="this/C35" ID="47" parentID="15" one="yes">
+   <atom label="C35$0"/>
+</sig>
+
+<sig label="this/C36" ID="48" parentID="15" one="yes">
+   <atom label="C36$0"/>
+</sig>
+
+<sig label="this/C37" ID="49" parentID="15" one="yes">
+   <atom label="C37$0"/>
+</sig>
+
+<sig label="this/C38" ID="50" parentID="15" one="yes">
+   <atom label="C38$0"/>
+</sig>
+
+<sig label="this/C40" ID="51" parentID="15" one="yes">
+   <atom label="C40$0"/>
+</sig>
+
+<sig label="this/C41" ID="52" parentID="15" one="yes">
+   <atom label="C41$0"/>
+</sig>
+
+<sig label="this/C42" ID="53" parentID="15" one="yes">
+   <atom label="C42$0"/>
+</sig>
+
+<sig label="this/C43" ID="54" parentID="15" one="yes">
+   <atom label="C43$0"/>
+</sig>
+
+<sig label="this/C44" ID="55" parentID="15" one="yes">
+   <atom label="C44$0"/>
+</sig>
+
+<sig label="this/C45" ID="56" parentID="15" one="yes">
+   <atom label="C45$0"/>
+</sig>
+
+<sig label="this/C46" ID="57" parentID="15" one="yes">
+   <atom label="C46$0"/>
+</sig>
+
+<sig label="this/C47" ID="58" parentID="15" one="yes">
+   <atom label="C47$0"/>
+</sig>
+
+<sig label="this/C48" ID="59" parentID="15" one="yes">
+   <atom label="C48$0"/>
+</sig>
+
+<sig label="this/C50" ID="60" parentID="15" one="yes">
+   <atom label="C50$0"/>
+</sig>
+
+<sig label="this/C51" ID="61" parentID="15" one="yes">
+   <atom label="C51$0"/>
+</sig>
+
+<sig label="this/C52" ID="62" parentID="15" one="yes">
+   <atom label="C52$0"/>
+</sig>
+
+<sig label="this/C53" ID="63" parentID="15" one="yes">
+   <atom label="C53$0"/>
+</sig>
+
+<sig label="this/C54" ID="64" parentID="15" one="yes">
+   <atom label="C54$0"/>
+</sig>
+
+<sig label="this/C55" ID="65" parentID="15" one="yes">
+   <atom label="C55$0"/>
+</sig>
+
+<sig label="this/C56" ID="66" parentID="15" one="yes">
+   <atom label="C56$0"/>
+</sig>
+
+<sig label="this/C57" ID="67" parentID="15" one="yes">
+   <atom label="C57$0"/>
+</sig>
+
+<sig label="this/C58" ID="68" parentID="15" one="yes">
+   <atom label="C58$0"/>
+</sig>
+
+<sig label="this/C60" ID="69" parentID="15" one="yes">
+   <atom label="C60$0"/>
+</sig>
+
+<sig label="this/C61" ID="70" parentID="15" one="yes">
+   <atom label="C61$0"/>
+</sig>
+
+<sig label="this/C62" ID="71" parentID="15" one="yes">
+   <atom label="C62$0"/>
+</sig>
+
+<sig label="this/C63" ID="72" parentID="15" one="yes">
+   <atom label="C63$0"/>
+</sig>
+
+<sig label="this/C64" ID="73" parentID="15" one="yes">
+   <atom label="C64$0"/>
+</sig>
+
+<sig label="this/C65" ID="74" parentID="15" one="yes">
+   <atom label="C65$0"/>
+</sig>
+
+<sig label="this/C66" ID="75" parentID="15" one="yes">
+   <atom label="C66$0"/>
+</sig>
+
+<sig label="this/C67" ID="76" parentID="15" one="yes">
+   <atom label="C67$0"/>
+</sig>
+
+<sig label="this/C68" ID="77" parentID="15" one="yes">
+   <atom label="C68$0"/>
+</sig>
+
+<sig label="this/C70" ID="78" parentID="15" one="yes">
+   <atom label="C70$0"/>
+</sig>
+
+<sig label="this/C71" ID="79" parentID="15" one="yes">
+   <atom label="C71$0"/>
+</sig>
+
+<sig label="this/C72" ID="80" parentID="15" one="yes">
+   <atom label="C72$0"/>
+</sig>
+
+<sig label="this/C73" ID="81" parentID="15" one="yes">
+   <atom label="C73$0"/>
+</sig>
+
+<sig label="this/C74" ID="82" parentID="15" one="yes">
+   <atom label="C74$0"/>
+</sig>
+
+<sig label="this/C75" ID="83" parentID="15" one="yes">
+   <atom label="C75$0"/>
+</sig>
+
+<sig label="this/C76" ID="84" parentID="15" one="yes">
+   <atom label="C76$0"/>
+</sig>
+
+<sig label="this/C77" ID="85" parentID="15" one="yes">
+   <atom label="C77$0"/>
+</sig>
+
+<sig label="this/C78" ID="86" parentID="15" one="yes">
+   <atom label="C78$0"/>
+</sig>
+
+<sig label="this/C80" ID="87" parentID="15" one="yes">
+   <atom label="C80$0"/>
+</sig>
+
+<sig label="this/C81" ID="88" parentID="15" one="yes">
+   <atom label="C81$0"/>
+</sig>
+
+<sig label="this/C82" ID="89" parentID="15" one="yes">
+   <atom label="C82$0"/>
+</sig>
+
+<sig label="this/C83" ID="90" parentID="15" one="yes">
+   <atom label="C83$0"/>
+</sig>
+
+<sig label="this/C84" ID="91" parentID="15" one="yes">
+   <atom label="C84$0"/>
+</sig>
+
+<sig label="this/C85" ID="92" parentID="15" one="yes">
+   <atom label="C85$0"/>
+</sig>
+
+<sig label="this/C86" ID="93" parentID="15" one="yes">
+   <atom label="C86$0"/>
+</sig>
+
+<sig label="this/C87" ID="94" parentID="15" one="yes">
+   <atom label="C87$0"/>
+</sig>
+
+<sig label="this/C88" ID="95" parentID="15" one="yes">
+   <atom label="C88$0"/>
+</sig>
+
+<sig label="this/cell" ID="15" parentID="2">
+</sig>
+
+<field label="content" ID="96" parentID="15">
+   <tuple> <atom label="C00$0"/> <atom label="n6$0"/> </tuple>
+   <tuple> <atom label="C01$0"/> <atom label="n7$0"/> </tuple>
+   <tuple> <atom label="C02$0"/> <atom label="n4$0"/> </tuple>
+   <tuple> <atom label="C03$0"/> <atom label="n8$0"/> </tuple>
+   <tuple> <atom label="C04$0"/> <atom label="n3$0"/> </tuple>
+   <tuple> <atom label="C05$0"/> <atom label="n9$0"/> </tuple>
+   <tuple> <atom label="C06$0"/> <atom label="n1$0"/> </tuple>
+   <tuple> <atom label="C07$0"/> <atom label="n2$0"/> </tuple>
+   <tuple> <atom label="C08$0"/> <atom label="n5$0"/> </tuple>
+   <tuple> <atom label="C10$0"/> <atom label="n1$0"/> </tuple>
+   <tuple> <atom label="C11$0"/> <atom label="n8$0"/> </tuple>
+   <tuple> <atom label="C12$0"/> <atom label="n5$0"/> </tuple>
+   <tuple> <atom label="C13$0"/> <atom label="n6$0"/> </tuple>
+   <tuple> <atom label="C14$0"/> <atom label="n4$0"/> </tuple>
+   <tuple> <atom label="C15$0"/> <atom label="n2$0"/> </tuple>
+   <tuple> <atom label="C16$0"/> <atom label="n7$0"/> </tuple>
+   <tuple> <atom label="C17$0"/> <atom label="n9$0"/> </tuple>
+   <tuple> <atom label="C18$0"/> <atom label="n3$0"/> </tuple>
+   <tuple> <atom label="C20$0"/> <atom label="n3$0"/> </tuple>
+   <tuple> <atom label="C21$0"/> <atom label="n2$0"/> </tuple>
+   <tuple> <atom label="C22$0"/> <atom label="n9$0"/> </tuple>
+   <tuple> <atom label="C23$0"/> <atom label="n5$0"/> </tuple>
+   <tuple> <atom label="C24$0"/> <atom label="n1$0"/> </tuple>
+   <tuple> <atom label="C25$0"/> <atom label="n7$0"/> </tuple>
+   <tuple> <atom label="C26$0"/> <atom label="n6$0"/> </tuple>
+   <tuple> <atom label="C27$0"/> <atom label="n4$0"/> </tuple>
+   <tuple> <atom label="C28$0"/> <atom label="n8$0"/> </tuple>
+   <tuple> <atom label="C30$0"/> <atom label="n7$0"/> </tuple>
+   <tuple> <atom label="C31$0"/> <atom label="n1$0"/> </tuple>
+   <tuple> <atom label="C32$0"/> <atom label="n3$0"/> </tuple>
+   <tuple> <atom label="C33$0"/> <atom label="n9$0"/> </tuple>
+   <tuple> <atom label="C34$0"/> <atom label="n6$0"/> </tuple>
+   <tuple> <atom label="C35$0"/> <atom label="n5$0"/> </tuple>
+   <tuple> <atom label="C36$0"/> <atom label="n4$0"/> </tuple>
+   <tuple> <atom label="C37$0"/> <atom label="n8$0"/> </tuple>
+   <tuple> <atom label="C38$0"/> <atom label="n2$0"/> </tuple>
+   <tuple> <atom label="C40$0"/> <atom label="n9$0"/> </tuple>
+   <tuple> <atom label="C41$0"/> <atom label="n5$0"/> </tuple>
+   <tuple> <atom label="C42$0"/> <atom label="n6$0"/> </tuple>
+   <tuple> <atom label="C43$0"/> <atom label="n2$0"/> </tuple>
+   <tuple> <atom label="C44$0"/> <atom label="n8$0"/> </tuple>
+   <tuple> <atom label="C45$0"/> <atom label="n4$0"/> </tuple>
+   <tuple> <atom label="C46$0"/> <atom label="n3$0"/> </tuple>
+   <tuple> <atom label="C47$0"/> <atom label="n7$0"/> </tuple>
+   <tuple> <atom label="C48$0"/> <atom label="n1$0"/> </tuple>
+   <tuple> <atom label="C50$0"/> <atom label="n8$0"/> </tuple>
+   <tuple> <atom label="C51$0"/> <atom label="n4$0"/> </tuple>
+   <tuple> <atom label="C52$0"/> <atom label="n2$0"/> </tuple>
+   <tuple> <atom label="C53$0"/> <atom label="n3$0"/> </tuple>
+   <tuple> <atom label="C54$0"/> <atom label="n7$0"/> </tuple>
+   <tuple> <atom label="C55$0"/> <atom label="n1$0"/> </tuple>
+   <tuple> <atom label="C56$0"/> <atom label="n9$0"/> </tuple>
+   <tuple> <atom label="C57$0"/> <atom label="n5$0"/> </tuple>
+   <tuple> <atom label="C58$0"/> <atom label="n6$0"/> </tuple>
+   <tuple> <atom label="C60$0"/> <atom label="n5$0"/> </tuple>
+   <tuple> <atom label="C61$0"/> <atom label="n3$0"/> </tuple>
+   <tuple> <atom label="C62$0"/> <atom label="n7$0"/> </tuple>
+   <tuple> <atom label="C63$0"/> <atom label="n4$0"/> </tuple>
+   <tuple> <atom label="C64$0"/> <atom label="n2$0"/> </tuple>
+   <tuple> <atom label="C65$0"/> <atom label="n6$0"/> </tuple>
+   <tuple> <atom label="C66$0"/> <atom label="n8$0"/> </tuple>
+   <tuple> <atom label="C67$0"/> <atom label="n1$0"/> </tuple>
+   <tuple> <atom label="C68$0"/> <atom label="n9$0"/> </tuple>
+   <tuple> <atom label="C70$0"/> <atom label="n2$0"/> </tuple>
+   <tuple> <atom label="C71$0"/> <atom label="n6$0"/> </tuple>
+   <tuple> <atom label="C72$0"/> <atom label="n1$0"/> </tuple>
+   <tuple> <atom label="C73$0"/> <atom label="n7$0"/> </tuple>
+   <tuple> <atom label="C74$0"/> <atom label="n9$0"/> </tuple>
+   <tuple> <atom label="C75$0"/> <atom label="n8$0"/> </tuple>
+   <tuple> <atom label="C76$0"/> <atom label="n5$0"/> </tuple>
+   <tuple> <atom label="C77$0"/> <atom label="n3$0"/> </tuple>
+   <tuple> <atom label="C78$0"/> <atom label="n4$0"/> </tuple>
+   <tuple> <atom label="C80$0"/> <atom label="n4$0"/> </tuple>
+   <tuple> <atom label="C81$0"/> <atom label="n9$0"/> </tuple>
+   <tuple> <atom label="C82$0"/> <atom label="n8$0"/> </tuple>
+   <tuple> <atom label="C83$0"/> <atom label="n1$0"/> </tuple>
+   <tuple> <atom label="C84$0"/> <atom label="n5$0"/> </tuple>
+   <tuple> <atom label="C85$0"/> <atom label="n3$0"/> </tuple>
+   <tuple> <atom label="C86$0"/> <atom label="n2$0"/> </tuple>
+   <tuple> <atom label="C87$0"/> <atom label="n6$0"/> </tuple>
+   <tuple> <atom label="C88$0"/> <atom label="n7$0"/> </tuple>
+   <types> <type ID="15"/> <type ID="5"/> </types>
+</field>
+
+<sig label="this/R0" ID="97" parentID="98" one="yes">
+   <atom label="R0$0"/>
+</sig>
+
+<sig label="this/R1" ID="99" parentID="98" one="yes">
+   <atom label="R1$0"/>
+</sig>
+
+<sig label="this/R2" ID="100" parentID="98" one="yes">
+   <atom label="R2$0"/>
+</sig>
+
+<sig label="this/R3" ID="101" parentID="98" one="yes">
+   <atom label="R3$0"/>
+</sig>
+
+<sig label="this/R4" ID="102" parentID="98" one="yes">
+   <atom label="R4$0"/>
+</sig>
+
+<sig label="this/R5" ID="103" parentID="98" one="yes">
+   <atom label="R5$0"/>
+</sig>
+
+<sig label="this/R6" ID="104" parentID="98" one="yes">
+   <atom label="R6$0"/>
+</sig>
+
+<sig label="this/R7" ID="105" parentID="98" one="yes">
+   <atom label="R7$0"/>
+</sig>
+
+<sig label="this/R8" ID="106" parentID="98" one="yes">
+   <atom label="R8$0"/>
+</sig>
+
+<sig label="this/row" ID="98" parentID="107" abstract="yes">
+</sig>
+
+<sig label="this/C0" ID="108" parentID="109" one="yes">
+   <atom label="C0$0"/>
+</sig>
+
+<sig label="this/C1" ID="110" parentID="109" one="yes">
+   <atom label="C1$0"/>
+</sig>
+
+<sig label="this/C2" ID="111" parentID="109" one="yes">
+   <atom label="C2$0"/>
+</sig>
+
+<sig label="this/C3" ID="112" parentID="109" one="yes">
+   <atom label="C3$0"/>
+</sig>
+
+<sig label="this/C4" ID="113" parentID="109" one="yes">
+   <atom label="C4$0"/>
+</sig>
+
+<sig label="this/C5" ID="114" parentID="109" one="yes">
+   <atom label="C5$0"/>
+</sig>
+
+<sig label="this/C6" ID="115" parentID="109" one="yes">
+   <atom label="C6$0"/>
+</sig>
+
+<sig label="this/C7" ID="116" parentID="109" one="yes">
+   <atom label="C7$0"/>
+</sig>
+
+<sig label="this/C8" ID="117" parentID="109" one="yes">
+   <atom label="C8$0"/>
+</sig>
+
+<sig label="this/column" ID="109" parentID="107" abstract="yes">
+</sig>
+
+<sig label="this/s11" ID="118" parentID="119" one="yes">
+   <atom label="s11$0"/>
+</sig>
+
+<sig label="this/s14" ID="120" parentID="119" one="yes">
+   <atom label="s14$0"/>
+</sig>
+
+<sig label="this/s17" ID="121" parentID="119" one="yes">
+   <atom label="s17$0"/>
+</sig>
+
+<sig label="this/s41" ID="122" parentID="119" one="yes">
+   <atom label="s41$0"/>
+</sig>
+
+<sig label="this/s44" ID="123" parentID="119" one="yes">
+   <atom label="s44$0"/>
+</sig>
+
+<sig label="this/s47" ID="124" parentID="119" one="yes">
+   <atom label="s47$0"/>
+</sig>
+
+<sig label="this/s711" ID="125" parentID="119" one="yes">
+   <atom label="s711$0"/>
+</sig>
+
+<sig label="this/s74" ID="126" parentID="119" one="yes">
+   <atom label="s74$0"/>
+</sig>
+
+<sig label="this/s77" ID="127" parentID="119" one="yes">
+   <atom label="s77$0"/>
+</sig>
+
+<sig label="this/square9" ID="119" parentID="107" abstract="yes">
+</sig>
+
+<sig label="this/board" ID="128" parentID="107" one="yes">
+   <atom label="board$0"/>
+</sig>
+
+<field label="rows" ID="129" parentID="128">
+   <tuple> <atom label="board$0"/> <atom label="R0$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="R1$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="R2$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="R3$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="R4$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="R5$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="R6$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="R7$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="R8$0"/> </tuple>
+   <types> <type ID="128"/> <type ID="98"/> </types>
+</field>
+
+<field label="columns" ID="130" parentID="128">
+   <tuple> <atom label="board$0"/> <atom label="C0$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="C1$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="C2$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="C3$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="C4$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="C5$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="C6$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="C7$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="C8$0"/> </tuple>
+   <types> <type ID="128"/> <type ID="109"/> </types>
+</field>
+
+<field label="squares" ID="131" parentID="128">
+   <tuple> <atom label="board$0"/> <atom label="s11$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="s14$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="s17$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="s41$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="s44$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="s47$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="s711$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="s74$0"/> </tuple>
+   <tuple> <atom label="board$0"/> <atom label="s77$0"/> </tuple>
+   <types> <type ID="128"/> <type ID="119"/> </types>
+</field>
+
+<sig label="this/group" ID="107" parentID="2" abstract="yes">
+</sig>
+
+<field label="cells" ID="132" parentID="107">
+   <tuple> <atom label="R0$0"/> <atom label="C00$0"/> </tuple>
+   <tuple> <atom label="R0$0"/> <atom label="C01$0"/> </tuple>
+   <tuple> <atom label="R0$0"/> <atom label="C02$0"/> </tuple>
+   <tuple> <atom label="R0$0"/> <atom label="C03$0"/> </tuple>
+   <tuple> <atom label="R0$0"/> <atom label="C04$0"/> </tuple>
+   <tuple> <atom label="R0$0"/> <atom label="C05$0"/> </tuple>
+   <tuple> <atom label="R0$0"/> <atom label="C06$0"/> </tuple>
+   <tuple> <atom label="R0$0"/> <atom label="C07$0"/> </tuple>
+   <tuple> <atom label="R0$0"/> <atom label="C08$0"/> </tuple>
+   <tuple> <atom label="R1$0"/> <atom label="C10$0"/> </tuple>
+   <tuple> <atom label="R1$0"/> <atom label="C11$0"/> </tuple>
+   <tuple> <atom label="R1$0"/> <atom label="C12$0"/> </tuple>
+   <tuple> <atom label="R1$0"/> <atom label="C13$0"/> </tuple>
+   <tuple> <atom label="R1$0"/> <atom label="C14$0"/> </tuple>
+   <tuple> <atom label="R1$0"/> <atom label="C15$0"/> </tuple>
+   <tuple> <atom label="R1$0"/> <atom label="C16$0"/> </tuple>
+   <tuple> <atom label="R1$0"/> <atom label="C17$0"/> </tuple>
+   <tuple> <atom label="R1$0"/> <atom label="C18$0"/> </tuple>
+   <tuple> <atom label="R2$0"/> <atom label="C20$0"/> </tuple>
+   <tuple> <atom label="R2$0"/> <atom label="C21$0"/> </tuple>
+   <tuple> <atom label="R2$0"/> <atom label="C22$0"/> </tuple>
+   <tuple> <atom label="R2$0"/> <atom label="C23$0"/> </tuple>
+   <tuple> <atom label="R2$0"/> <atom label="C24$0"/> </tuple>
+   <tuple> <atom label="R2$0"/> <atom label="C25$0"/> </tuple>
+   <tuple> <atom label="R2$0"/> <atom label="C26$0"/> </tuple>
+   <tuple> <atom label="R2$0"/> <atom label="C27$0"/> </tuple>
+   <tuple> <atom label="R2$0"/> <atom label="C28$0"/> </tuple>
+   <tuple> <atom label="R3$0"/> <atom label="C30$0"/> </tuple>
+   <tuple> <atom label="R3$0"/> <atom label="C31$0"/> </tuple>
+   <tuple> <atom label="R3$0"/> <atom label="C32$0"/> </tuple>
+   <tuple> <atom label="R3$0"/> <atom label="C33$0"/> </tuple>
+   <tuple> <atom label="R3$0"/> <atom label="C34$0"/> </tuple>
+   <tuple> <atom label="R3$0"/> <atom label="C35$0"/> </tuple>
+   <tuple> <atom label="R3$0"/> <atom label="C36$0"/> </tuple>
+   <tuple> <atom label="R3$0"/> <atom label="C37$0"/> </tuple>
+   <tuple> <atom label="R3$0"/> <atom label="C38$0"/> </tuple>
+   <tuple> <atom label="R4$0"/> <atom label="C40$0"/> </tuple>
+   <tuple> <atom label="R4$0"/> <atom label="C41$0"/> </tuple>
+   <tuple> <atom label="R4$0"/> <atom label="C42$0"/> </tuple>
+   <tuple> <atom label="R4$0"/> <atom label="C43$0"/> </tuple>
+   <tuple> <atom label="R4$0"/> <atom label="C44$0"/> </tuple>
+   <tuple> <atom label="R4$0"/> <atom label="C45$0"/> </tuple>
+   <tuple> <atom label="R4$0"/> <atom label="C46$0"/> </tuple>
+   <tuple> <atom label="R4$0"/> <atom label="C47$0"/> </tuple>
+   <tuple> <atom label="R4$0"/> <atom label="C48$0"/> </tuple>
+   <tuple> <atom label="R5$0"/> <atom label="C50$0"/> </tuple>
+   <tuple> <atom label="R5$0"/> <atom label="C51$0"/> </tuple>
+   <tuple> <atom label="R5$0"/> <atom label="C52$0"/> </tuple>
+   <tuple> <atom label="R5$0"/> <atom label="C53$0"/> </tuple>
+   <tuple> <atom label="R5$0"/> <atom label="C54$0"/> </tuple>
+   <tuple> <atom label="R5$0"/> <atom label="C55$0"/> </tuple>
+   <tuple> <atom label="R5$0"/> <atom label="C56$0"/> </tuple>
+   <tuple> <atom label="R5$0"/> <atom label="C57$0"/> </tuple>
+   <tuple> <atom label="R5$0"/> <atom label="C58$0"/> </tuple>
+   <tuple> <atom label="R6$0"/> <atom label="C60$0"/> </tuple>
+   <tuple> <atom label="R6$0"/> <atom label="C61$0"/> </tuple>
+   <tuple> <atom label="R6$0"/> <atom label="C62$0"/> </tuple>
+   <tuple> <atom label="R6$0"/> <atom label="C63$0"/> </tuple>
+   <tuple> <atom label="R6$0"/> <atom label="C64$0"/> </tuple>
+   <tuple> <atom label="R6$0"/> <atom label="C65$0"/> </tuple>
+   <tuple> <atom label="R6$0"/> <atom label="C66$0"/> </tuple>
+   <tuple> <atom label="R6$0"/> <atom label="C67$0"/> </tuple>
+   <tuple> <atom label="R6$0"/> <atom label="C68$0"/> </tuple>
+   <tuple> <atom label="R7$0"/> <atom label="C70$0"/> </tuple>
+   <tuple> <atom label="R7$0"/> <atom label="C71$0"/> </tuple>
+   <tuple> <atom label="R7$0"/> <atom label="C72$0"/> </tuple>
+   <tuple> <atom label="R7$0"/> <atom label="C73$0"/> </tuple>
+   <tuple> <atom label="R7$0"/> <atom label="C74$0"/> </tuple>
+   <tuple> <atom label="R7$0"/> <atom label="C75$0"/> </tuple>
+   <tuple> <atom label="R7$0"/> <atom label="C76$0"/> </tuple>
+   <tuple> <atom label="R7$0"/> <atom label="C77$0"/> </tuple>
+   <tuple> <atom label="R7$0"/> <atom label="C78$0"/> </tuple>
+   <tuple> <atom label="R8$0"/> <atom label="C80$0"/> </tuple>
+   <tuple> <atom label="R8$0"/> <atom label="C81$0"/> </tuple>
+   <tuple> <atom label="R8$0"/> <atom label="C82$0"/> </tuple>
+   <tuple> <atom label="R8$0"/> <atom label="C83$0"/> </tuple>
+   <tuple> <atom label="R8$0"/> <atom label="C84$0"/> </tuple>
+   <tuple> <atom label="R8$0"/> <atom label="C85$0"/> </tuple>
+   <tuple> <atom label="R8$0"/> <atom label="C86$0"/> </tuple>
+   <tuple> <atom label="R8$0"/> <atom label="C87$0"/> </tuple>
+   <tuple> <atom label="R8$0"/> <atom label="C88$0"/> </tuple>
+   <tuple> <atom label="C0$0"/> <atom label="C00$0"/> </tuple>
+   <tuple> <atom label="C0$0"/> <atom label="C10$0"/> </tuple>
+   <tuple> <atom label="C0$0"/> <atom label="C20$0"/> </tuple>
+   <tuple> <atom label="C0$0"/> <atom label="C30$0"/> </tuple>
+   <tuple> <atom label="C0$0"/> <atom label="C40$0"/> </tuple>
+   <tuple> <atom label="C0$0"/> <atom label="C50$0"/> </tuple>
+   <tuple> <atom label="C0$0"/> <atom label="C60$0"/> </tuple>
+   <tuple> <atom label="C0$0"/> <atom label="C70$0"/> </tuple>
+   <tuple> <atom label="C0$0"/> <atom label="C80$0"/> </tuple>
+   <tuple> <atom label="C1$0"/> <atom label="C01$0"/> </tuple>
+   <tuple> <atom label="C1$0"/> <atom label="C11$0"/> </tuple>
+   <tuple> <atom label="C1$0"/> <atom label="C21$0"/> </tuple>
+   <tuple> <atom label="C1$0"/> <atom label="C31$0"/> </tuple>
+   <tuple> <atom label="C1$0"/> <atom label="C41$0"/> </tuple>
+   <tuple> <atom label="C1$0"/> <atom label="C51$0"/> </tuple>
+   <tuple> <atom label="C1$0"/> <atom label="C61$0"/> </tuple>
+   <tuple> <atom label="C1$0"/> <atom label="C71$0"/> </tuple>
+   <tuple> <atom label="C1$0"/> <atom label="C81$0"/> </tuple>
+   <tuple> <atom label="C2$0"/> <atom label="C02$0"/> </tuple>
+   <tuple> <atom label="C2$0"/> <atom label="C12$0"/> </tuple>
+   <tuple> <atom label="C2$0"/> <atom label="C22$0"/> </tuple>
+   <tuple> <atom label="C2$0"/> <atom label="C32$0"/> </tuple>
+   <tuple> <atom label="C2$0"/> <atom label="C42$0"/> </tuple>
+   <tuple> <atom label="C2$0"/> <atom label="C52$0"/> </tuple>
+   <tuple> <atom label="C2$0"/> <atom label="C62$0"/> </tuple>
+   <tuple> <atom label="C2$0"/> <atom label="C72$0"/> </tuple>
+   <tuple> <atom label="C2$0"/> <atom label="C82$0"/> </tuple>
+   <tuple> <atom label="C3$0"/> <atom label="C03$0"/> </tuple>
+   <tuple> <atom label="C3$0"/> <atom label="C13$0"/> </tuple>
+   <tuple> <atom label="C3$0"/> <atom label="C23$0"/> </tuple>
+   <tuple> <atom label="C3$0"/> <atom label="C33$0"/> </tuple>
+   <tuple> <atom label="C3$0"/> <atom label="C43$0"/> </tuple>
+   <tuple> <atom label="C3$0"/> <atom label="C53$0"/> </tuple>
+   <tuple> <atom label="C3$0"/> <atom label="C63$0"/> </tuple>
+   <tuple> <atom label="C3$0"/> <atom label="C73$0"/> </tuple>
+   <tuple> <atom label="C3$0"/> <atom label="C83$0"/> </tuple>
+   <tuple> <atom label="C4$0"/> <atom label="C04$0"/> </tuple>
+   <tuple> <atom label="C4$0"/> <atom label="C14$0"/> </tuple>
+   <tuple> <atom label="C4$0"/> <atom label="C24$0"/> </tuple>
+   <tuple> <atom label="C4$0"/> <atom label="C34$0"/> </tuple>
+   <tuple> <atom label="C4$0"/> <atom label="C44$0"/> </tuple>
+   <tuple> <atom label="C4$0"/> <atom label="C54$0"/> </tuple>
+   <tuple> <atom label="C4$0"/> <atom label="C64$0"/> </tuple>
+   <tuple> <atom label="C4$0"/> <atom label="C74$0"/> </tuple>
+   <tuple> <atom label="C4$0"/> <atom label="C84$0"/> </tuple>
+   <tuple> <atom label="C5$0"/> <atom label="C05$0"/> </tuple>
+   <tuple> <atom label="C5$0"/> <atom label="C15$0"/> </tuple>
+   <tuple> <atom label="C5$0"/> <atom label="C25$0"/> </tuple>
+   <tuple> <atom label="C5$0"/> <atom label="C35$0"/> </tuple>
+   <tuple> <atom label="C5$0"/> <atom label="C45$0"/> </tuple>
+   <tuple> <atom label="C5$0"/> <atom label="C55$0"/> </tuple>
+   <tuple> <atom label="C5$0"/> <atom label="C65$0"/> </tuple>
+   <tuple> <atom label="C5$0"/> <atom label="C75$0"/> </tuple>
+   <tuple> <atom label="C5$0"/> <atom label="C85$0"/> </tuple>
+   <tuple> <atom label="C6$0"/> <atom label="C06$0"/> </tuple>
+   <tuple> <atom label="C6$0"/> <atom label="C16$0"/> </tuple>
+   <tuple> <atom label="C6$0"/> <atom label="C26$0"/> </tuple>
+   <tuple> <atom label="C6$0"/> <atom label="C36$0"/> </tuple>
+   <tuple> <atom label="C6$0"/> <atom label="C46$0"/> </tuple>
+   <tuple> <atom label="C6$0"/> <atom label="C56$0"/> </tuple>
+   <tuple> <atom label="C6$0"/> <atom label="C66$0"/> </tuple>
+   <tuple> <atom label="C6$0"/> <atom label="C76$0"/> </tuple>
+   <tuple> <atom label="C6$0"/> <atom label="C86$0"/> </tuple>
+   <tuple> <atom label="C7$0"/> <atom label="C07$0"/> </tuple>
+   <tuple> <atom label="C7$0"/> <atom label="C17$0"/> </tuple>
+   <tuple> <atom label="C7$0"/> <atom label="C27$0"/> </tuple>
+   <tuple> <atom label="C7$0"/> <atom label="C37$0"/> </tuple>
+   <tuple> <atom label="C7$0"/> <atom label="C47$0"/> </tuple>
+   <tuple> <atom label="C7$0"/> <atom label="C57$0"/> </tuple>
+   <tuple> <atom label="C7$0"/> <atom label="C67$0"/> </tuple>
+   <tuple> <atom label="C7$0"/> <atom label="C77$0"/> </tuple>
+   <tuple> <atom label="C7$0"/> <atom label="C87$0"/> </tuple>
+   <tuple> <atom label="C8$0"/> <atom label="C08$0"/> </tuple>
+   <tuple> <atom label="C8$0"/> <atom label="C18$0"/> </tuple>
+   <tuple> <atom label="C8$0"/> <atom label="C28$0"/> </tuple>
+   <tuple> <atom label="C8$0"/> <atom label="C38$0"/> </tuple>
+   <tuple> <atom label="C8$0"/> <atom label="C48$0"/> </tuple>
+   <tuple> <atom label="C8$0"/> <atom label="C58$0"/> </tuple>
+   <tuple> <atom label="C8$0"/> <atom label="C68$0"/> </tuple>
+   <tuple> <atom label="C8$0"/> <atom label="C78$0"/> </tuple>
+   <tuple> <atom label="C8$0"/> <atom label="C88$0"/> </tuple>
+   <tuple> <atom label="s11$0"/> <atom label="C00$0"/> </tuple>
+   <tuple> <atom label="s11$0"/> <atom label="C01$0"/> </tuple>
+   <tuple> <atom label="s11$0"/> <atom label="C02$0"/> </tuple>
+   <tuple> <atom label="s11$0"/> <atom label="C10$0"/> </tuple>
+   <tuple> <atom label="s11$0"/> <atom label="C11$0"/> </tuple>
+   <tuple> <atom label="s11$0"/> <atom label="C12$0"/> </tuple>
+   <tuple> <atom label="s11$0"/> <atom label="C20$0"/> </tuple>
+   <tuple> <atom label="s11$0"/> <atom label="C21$0"/> </tuple>
+   <tuple> <atom label="s11$0"/> <atom label="C22$0"/> </tuple>
+   <tuple> <atom label="s14$0"/> <atom label="C03$0"/> </tuple>
+   <tuple> <atom label="s14$0"/> <atom label="C04$0"/> </tuple>
+   <tuple> <atom label="s14$0"/> <atom label="C05$0"/> </tuple>
+   <tuple> <atom label="s14$0"/> <atom label="C13$0"/> </tuple>
+   <tuple> <atom label="s14$0"/> <atom label="C14$0"/> </tuple>
+   <tuple> <atom label="s14$0"/> <atom label="C15$0"/> </tuple>
+   <tuple> <atom label="s14$0"/> <atom label="C23$0"/> </tuple>
+   <tuple> <atom label="s14$0"/> <atom label="C24$0"/> </tuple>
+   <tuple> <atom label="s14$0"/> <atom label="C25$0"/> </tuple>
+   <tuple> <atom label="s17$0"/> <atom label="C06$0"/> </tuple>
+   <tuple> <atom label="s17$0"/> <atom label="C07$0"/> </tuple>
+   <tuple> <atom label="s17$0"/> <atom label="C08$0"/> </tuple>
+   <tuple> <atom label="s17$0"/> <atom label="C16$0"/> </tuple>
+   <tuple> <atom label="s17$0"/> <atom label="C17$0"/> </tuple>
+   <tuple> <atom label="s17$0"/> <atom label="C18$0"/> </tuple>
+   <tuple> <atom label="s17$0"/> <atom label="C26$0"/> </tuple>
+   <tuple> <atom label="s17$0"/> <atom label="C27$0"/> </tuple>
+   <tuple> <atom label="s17$0"/> <atom label="C28$0"/> </tuple>
+   <tuple> <atom label="s41$0"/> <atom label="C30$0"/> </tuple>
+   <tuple> <atom label="s41$0"/> <atom label="C31$0"/> </tuple>
+   <tuple> <atom label="s41$0"/> <atom label="C32$0"/> </tuple>
+   <tuple> <atom label="s41$0"/> <atom label="C40$0"/> </tuple>
+   <tuple> <atom label="s41$0"/> <atom label="C41$0"/> </tuple>
+   <tuple> <atom label="s41$0"/> <atom label="C42$0"/> </tuple>
+   <tuple> <atom label="s41$0"/> <atom label="C50$0"/> </tuple>
+   <tuple> <atom label="s41$0"/> <atom label="C51$0"/> </tuple>
+   <tuple> <atom label="s41$0"/> <atom label="C52$0"/> </tuple>
+   <tuple> <atom label="s44$0"/> <atom label="C33$0"/> </tuple>
+   <tuple> <atom label="s44$0"/> <atom label="C34$0"/> </tuple>
+   <tuple> <atom label="s44$0"/> <atom label="C35$0"/> </tuple>
+   <tuple> <atom label="s44$0"/> <atom label="C43$0"/> </tuple>
+   <tuple> <atom label="s44$0"/> <atom label="C44$0"/> </tuple>
+   <tuple> <atom label="s44$0"/> <atom label="C45$0"/> </tuple>
+   <tuple> <atom label="s44$0"/> <atom label="C53$0"/> </tuple>
+   <tuple> <atom label="s44$0"/> <atom label="C54$0"/> </tuple>
+   <tuple> <atom label="s44$0"/> <atom label="C55$0"/> </tuple>
+   <tuple> <atom label="s47$0"/> <atom label="C36$0"/> </tuple>
+   <tuple> <atom label="s47$0"/> <atom label="C37$0"/> </tuple>
+   <tuple> <atom label="s47$0"/> <atom label="C38$0"/> </tuple>
+   <tuple> <atom label="s47$0"/> <atom label="C46$0"/> </tuple>
+   <tuple> <atom label="s47$0"/> <atom label="C47$0"/> </tuple>
+   <tuple> <atom label="s47$0"/> <atom label="C48$0"/> </tuple>
+   <tuple> <atom label="s47$0"/> <atom label="C56$0"/> </tuple>
+   <tuple> <atom label="s47$0"/> <atom label="C57$0"/> </tuple>
+   <tuple> <atom label="s47$0"/> <atom label="C58$0"/> </tuple>
+   <tuple> <atom label="s711$0"/> <atom label="C60$0"/> </tuple>
+   <tuple> <atom label="s711$0"/> <atom label="C61$0"/> </tuple>
+   <tuple> <atom label="s711$0"/> <atom label="C62$0"/> </tuple>
+   <tuple> <atom label="s711$0"/> <atom label="C70$0"/> </tuple>
+   <tuple> <atom label="s711$0"/> <atom label="C71$0"/> </tuple>
+   <tuple> <atom label="s711$0"/> <atom label="C72$0"/> </tuple>
+   <tuple> <atom label="s711$0"/> <atom label="C80$0"/> </tuple>
+   <tuple> <atom label="s711$0"/> <atom label="C81$0"/> </tuple>
+   <tuple> <atom label="s711$0"/> <atom label="C82$0"/> </tuple>
+   <tuple> <atom label="s74$0"/> <atom label="C63$0"/> </tuple>
+   <tuple> <atom label="s74$0"/> <atom label="C64$0"/> </tuple>
+   <tuple> <atom label="s74$0"/> <atom label="C65$0"/> </tuple>
+   <tuple> <atom label="s74$0"/> <atom label="C73$0"/> </tuple>
+   <tuple> <atom label="s74$0"/> <atom label="C74$0"/> </tuple>
+   <tuple> <atom label="s74$0"/> <atom label="C75$0"/> </tuple>
+   <tuple> <atom label="s74$0"/> <atom label="C83$0"/> </tuple>
+   <tuple> <atom label="s74$0"/> <atom label="C84$0"/> </tuple>
+   <tuple> <atom label="s74$0"/> <atom label="C85$0"/> </tuple>
+   <tuple> <atom label="s77$0"/> <atom label="C66$0"/> </tuple>
+   <tuple> <atom label="s77$0"/> <atom label="C67$0"/> </tuple>
+   <tuple> <atom label="s77$0"/> <atom label="C68$0"/> </tuple>
+   <tuple> <atom label="s77$0"/> <atom label="C76$0"/> </tuple>
+   <tuple> <atom label="s77$0"/> <atom label="C77$0"/> </tuple>
+   <tuple> <atom label="s77$0"/> <atom label="C78$0"/> </tuple>
+   <tuple> <atom label="s77$0"/> <atom label="C86$0"/> </tuple>
+   <tuple> <atom label="s77$0"/> <atom label="C87$0"/> </tuple>
+   <tuple> <atom label="s77$0"/> <atom label="C88$0"/> </tuple>
+   <types> <type ID="107"/> <type ID="15"/> </types>
+</field>
+
+<sig label="univ" ID="2" builtin="yes">
+</sig>
+
+</instance>
+
+<source filename="C:\Users\Greg\Documents\sudoku-alloy-model\source\Part2Model.als" content="&#x000a;// nine possible numbers for a sudoku cell&#x000a;abstract sig number {}&#x000a;one sig n1, n2, n3, n4, n5, n6, n7, n8, n9 extends number {}&#x000a; &#x000a;sig cell {content: number}  &#x000a;&#x000a;//a non-format specific grouping of cells &#x000a;abstract sig group &#x000a;{&#x000a;  cells: set cell&#x000a;} &#x000a; &#x000a;abstract sig row, column, square9 extends group {}&#x000a;&#x000a;// A board consists rows, columns and 3x3 square9s&#x000a;// each row, column or square 9 has 9 members because it is a 9x9 board&#x000a;one sig board extends group &#x000a;{&#x000a;&#x0009;rows: set row,&#x000a;&#x0009;columns: set column,&#x000a;&#x0009;squares: set square9&#x000a;} &#x000a;{&#x000a;&#x0009;rows = R0 + R1 + R2 + R3 + R4 + R5 + R6 + R7 + R8&#x000a;&#x0009;columns = C0 + C1 + C2 + C3 + C4 + C5 + C6 + C7 + C8&#x000a;&#x0009;squares = s11 + s14 + s17 + s41 + s44 + s47 + s711 + s74 + s77&#x000a;}&#x000a;&#x000a;// Begin Added Asserts&#x000a;&#x000a;&#x000a;// Begin Contents Assert&#x000a;&#x000a;//all cells must be accounted for in the set of all rows&#x000a;assert boardRowsContainAllCells &#x000a;{&#x000a;&#x0009;one board: board | board.rows.cells = cell&#x000a;}&#x000a;&#x000a;// all cells must be accounted for in the set of all columns&#x000a;assert boardColumnsContainAllCells &#x000a;{&#x000a;&#x0009;one board: board | board.columns.cells = cell&#x000a;}&#x000a;&#x000a;//All cells must be accounted for in the set of all square9&apos;s&#x000a;assert boardSquaresContainAllCells &#x000a;{&#x000a;&#x0009;one board: board | board.squares.cells = cell&#x000a;}&#x000a;&#x000a;// End Content Assert&#x000a;&#x000a;//Every cell in a board must belong to a row, column and square9&#x000a;assert noStrayBoardCells &#x000a;{&#x000a;&#x0009;one board: board | board.squares.cells = board.rows.cells and board.squares.cells = board.columns.cells&#x000a;}&#x000a;&#x000a;// End cell Assert &#x000a;// End Added Asserts&#x000a;&#x000a;// Each cell in the board referenced by row i and column j&#x000a;// cell[i][j] = cij&#x000a;one sig&#x000a;C00, C01, C02, C03, C04, C05, C06, C07, C08,&#x000a;C10, C11, C12, C13, C14, C15, C16, C17, C18,&#x000a;C20, C21, C22, C23, C24, C25, C26, C27, C28,&#x000a;C30, C31, C32, C33, C34, C35, C36, C37, C38,&#x000a;C40, C41, C42, C43, C44, C45, C46, C47, C48,&#x000a;C50, C51, C52, C53, C54, C55, C56, C57, C58,&#x000a;C60, C61, C62, C63, C64, C65, C66, C67, C68,&#x000a;C70, C71, C72, C73, C74, C75, C76, C77, C78,&#x000a;C80, C81, C82, C83, C84, C85, C86, C87, C88 extends cell {}&#x000a; &#x000a;one sig R0, R1, R2, R3, R4, R5, R6, R7, R8 extends row {}&#x000a;one sig C0, C1, C2, C3, C4, C5, C6, C7, C8 extends column {}&#x000a;one sig s11, s14, s17, s41, s44, s47, s711, s74, s77 extends square9 {}&#x000a;&#x000a;&#x000a; //Define which cells go into which row, column and square9&#x000a;fact {&#x000a;  R0.cells = C00 + C01 + C02 + C03 + C04 + C05 + C06 + C07 + C08&#x000a;  R1.cells = C10 + C11 + C12 + C13 + C14 + C15 + C16 + C17 + C18&#x000a;  R2.cells = C20 + C21 + C22 + C23 + C24 + C25 + C26 + C27 + C28&#x000a;  R3.cells = C30 + C31 + C32 + C33 + C34 + C35 + C36 + C37 + C38&#x000a;  R4.cells = C40 + C41 + C42 + C43 + C44 + C45 + C46 + C47 + C48&#x000a;  R5.cells = C50 + C51 + C52 + C53 + C54 + C55 + C56 + C57 + C58&#x000a;  R6.cells = C60 + C61 + C62 + C63 + C64 + C65 + C66 + C67 + C68&#x000a;  R7.cells = C70 + C71 + C72 + C73 + C74 + C75 + C76 + C77 + C78&#x000a;  R8.cells = C80 + C81 + C82 + C83 + C84 + C85 + C86 + C87 + C88&#x000a; &#x000a;  C0.cells = C00 + C10 + C20 + C30 + C40 + C50 + C60 + C70 + C80&#x000a;  C1.cells = C01 + C11 + C21 + C31 + C41 + C51 + C61 + C71 + C81&#x000a;  C2.cells = C02 + C12 + C22 + C32 + C42 + C52 + C62 + C72 + C82&#x000a;  C3.cells = C03 + C13 + C23 + C33 + C43 + C53 + C63 + C73 + C83&#x000a;  C4.cells = C04 + C14 + C24 + C34 + C44 + C54 + C64 + C74 + C84&#x000a;  C5.cells = C05 + C15 + C25 + C35 + C45 + C55 + C65 + C75 + C85&#x000a;  C6.cells = C06 + C16 + C26 + C36 + C46 + C56 + C66 + C76 + C86&#x000a;  C7.cells = C07 + C17 + C27 + C37 + C47 + C57 + C67 + C77 + C87&#x000a;  C8.cells = C08 + C18 + C28 + C38 + C48 + C58 + C68 + C78 + C88&#x000a; &#x000a;  s11.cells = C00 + C01 + C02 + C10 + C11 + C12 + C20 + C21 + C22&#x000a;  s14.cells = C03 + C04 + C05 + C13 + C14 + C15 + C23 + C24 + C25&#x000a;  s17.cells = C06 + C07 + C08 + C16 + C17 + C18 + C26 + C27 + C28&#x000a;  s41.cells = C30 + C31 + C32 + C40 + C41 + C42 + C50 + C51 + C52&#x000a;  s44.cells = C33 + C34 + C35 + C43 + C44 + C45 + C53 + C54 + C55&#x000a;  s47.cells = C36 + C37 + C38 + C46 + C47 + C48 + C56 + C57 + C58&#x000a;  s711.cells = C60 + C61 + C62 + C70 + C71 + C72 + C80 + C81 + C82&#x000a;  s74.cells = C63 + C64 + C65 + C73 + C74 + C75 + C83 + C84 + C85&#x000a;  s77.cells = C66 + C67 + C68 + C76 + C77 + C78 + C86 + C87 + C88&#x000a;}&#x000a;&#x000a;//Make sure that each group only has one instance of a number n1-n9&#x000a;fact UniqueNumbersInGroup&#x000a;{&#x000a;&#x0009;all c, c&apos;: cell | some r: row | c in r.cells and c&apos; in r.cells =&gt; c.content != c&apos;.content&#x000a;&#x0009;all c, c&apos;: cell | some col: column | c in col.cells and c&apos; in col.cells =&gt; c.content != c&apos;.content&#x000a;&#x0009;all c, c&apos;: cell | some s: square9 | c in s.cells and c&apos; in s.cells =&gt; c.content != c&apos;.content&#x000a;} &#x000a;&#x000a;//Makes sure that a cell is in exactly 1 row&#x000a;assert EachCellBelongsToJustOneRow &#x000a;{&#x000a;  all cell: cell | one row: row | cell in row.cells&#x000a;}&#x000a;&#x000a;//Makes sure that a cell is in exactly  1 column&#x000a;assert EachCellBelongsToJustOneColumn &#x000a;{&#x000a;  all cell: cell | one column: column | cell in column.cells&#x000a;}&#x000a; &#x000a;//Makes sure that a cell is in exactly 1 Square9&#x000a;assert EachCellBelongsToJustOneMatrix &#x000a;{&#x000a;  all cell: cell | one square9: square9 | cell in square9.cells&#x000a;}&#x000a;&#x000a;// One possible game of sudoku, full&#x000a;pred Game1 &#x000a;{&#x0009;&#x000a;&#x0009;C00.&#x0009;content = n1&#x000a;&#x0009;C01.&#x0009;content = n3&#x000a;&#x0009;C02.&#x0009;content = n6&#x000a;&#x0009;C03.&#x0009;content = n5&#x000a;&#x0009;C04.&#x0009;content = n2&#x000a;&#x0009;C05.&#x0009;content = n7&#x000a;&#x0009;C06.&#x0009;content = n4&#x000a;&#x0009;C07.&#x0009;content = n8&#x000a;&#x0009;C08.&#x0009;content = n9&#x000a;&#x0009;C10.&#x0009;content = n7&#x000a;&#x0009;C11.&#x0009;content = n8&#x000a;&#x0009;C12.&#x0009;content = n2&#x000a;&#x0009;C13.&#x0009;content = n4&#x000a;&#x0009;C14.&#x0009;content = n9&#x000a;&#x0009;C15.&#x0009;content = n6&#x000a;&#x0009;C16.&#x0009;content = n3&#x000a;&#x0009;C17.&#x0009;content = n1&#x000a;&#x0009;C18.&#x0009;content = n5&#x000a;&#x0009;C20.&#x0009;content = n4&#x000a;&#x0009;C21.&#x0009;content = n9&#x000a;&#x0009;C22.&#x0009;content = n5&#x000a;&#x0009;C23.&#x0009;content = n3&#x000a;&#x0009;C24.&#x0009;content = n1&#x000a;&#x0009;C25.&#x0009;content = n8&#x000a;&#x0009;C26.&#x0009;content = n7&#x000a;&#x0009;C27.&#x0009;content = n2&#x000a;&#x0009;C28.&#x0009;content = n6&#x000a;&#x0009;C30.&#x0009;content = n2&#x000a;&#x0009;C31.&#x0009;content = n7&#x000a;&#x0009;C32.&#x0009;content = n4&#x000a;&#x0009;C33.&#x0009;content = n1&#x000a;&#x0009;C34.&#x0009;content = n3&#x000a;&#x0009;C35.&#x0009;content = n9&#x000a;&#x0009;C36.&#x0009;content = n5&#x000a;&#x0009;C37.&#x0009;content = n6&#x000a;&#x0009;C38.&#x0009;content = n8&#x000a;&#x0009;C40.&#x0009;content = n9&#x000a;&#x0009;C41.&#x0009;content = n5&#x000a;&#x0009;C42.&#x0009;content = n3&#x000a;&#x0009;C43.&#x0009;content = n6&#x000a;&#x0009;C44.&#x0009;content = n8&#x000a;&#x0009;C45.&#x0009;content = n2&#x000a;&#x0009;C46.&#x0009;content = n1&#x000a;&#x0009;C47.&#x0009;content = n4&#x000a;&#x0009;C48.&#x0009;content = n7&#x000a;&#x0009;C50.&#x0009;content = n6&#x000a;&#x0009;C51.&#x0009;content = n1&#x000a;&#x0009;C52.&#x0009;content = n8&#x000a;&#x0009;C53.&#x0009;content = n7&#x000a;&#x0009;C54.&#x0009;content = n5&#x000a;&#x0009;C55.&#x0009;content = n4&#x000a;&#x0009;C56.&#x0009;content = n2&#x000a;&#x0009;C57.&#x0009;content = n9&#x000a;&#x0009;C58.&#x0009;content = n3&#x000a;&#x0009;C60.&#x0009;content = n3&#x000a;&#x0009;C61.&#x0009;content = n6&#x000a;&#x0009;C62.&#x0009;content = n7&#x000a;&#x0009;C63.&#x0009;content = n8&#x000a;&#x0009;C64.&#x0009;content = n4&#x000a;&#x0009;C65.&#x0009;content = n1&#x000a;&#x0009;C66.&#x0009;content = n9&#x000a;&#x0009;C67.&#x0009;content = n5&#x000a;&#x0009;C68.&#x0009;content = n2&#x000a;&#x0009;C70.&#x0009;content = n8&#x000a;&#x0009;C71.&#x0009;content = n4&#x000a;&#x0009;C72.&#x0009;content = n9&#x000a;&#x0009;C73.&#x0009;content = n2&#x000a;&#x0009;C74.&#x0009;content = n7&#x000a;&#x0009;C75.&#x0009;content = n5&#x000a;&#x0009;C76.&#x0009;content = n6&#x000a;&#x0009;C77.&#x0009;content = n3&#x000a;&#x0009;C78.&#x0009;content = n1&#x000a;&#x0009;C80.&#x0009;content = n5&#x000a;&#x0009;C81.&#x0009;content = n2&#x000a;&#x0009;C82.&#x0009;content = n1&#x000a;&#x0009;C83.&#x0009;content = n9&#x000a;&#x0009;C84.&#x0009;content = n6&#x000a;&#x0009;C85.&#x0009;content = n3&#x000a;&#x0009;C86.&#x0009;content = n8&#x000a;&#x0009;C87.&#x0009;content = n7&#x000a;&#x0009;C88.&#x0009;content = n4&#x000a;}&#x000a; &#x000a;// another different full game of sudoku&#x000a;pred Game2&#x000a; {&#x000a;&#x0009;C00.content = n6&#x000a;&#x0009;C01.content = n7&#x000a;&#x0009;C02.content = n4&#x000a;&#x0009;C03.content = n8&#x000a;&#x0009;C04.content = n3&#x000a;&#x0009;C05.content = n9&#x000a;&#x0009;C06.content = n1&#x000a;&#x0009;C07.content = n2&#x000a;&#x0009;C08.content = n5&#x000a;&#x0009;C10.content = n1&#x000a;&#x0009;C11.content = n8&#x000a;&#x0009;C12.content = n5&#x000a;&#x0009;C13.content = n6&#x000a;&#x0009;C14.content =&#x0009; n4&#x000a;&#x0009;C15.content = n2&#x000a;&#x0009;C16.content = n7&#x000a;&#x0009;C17.content = n9&#x000a;&#x0009;C18.content = n3&#x000a;&#x0009;C20.content = n3&#x000a;&#x0009;C21.content = n2&#x000a;&#x0009;C22.content = n9&#x000a;&#x0009;C23.content = n5&#x000a;&#x0009;C24.content = n1&#x000a;&#x0009;C25.content = n7&#x000a;&#x0009;C26.content = n6&#x000a;&#x0009;C27.content = n4&#x000a;&#x0009;C28.content = n8&#x000a;&#x0009;C30.content = n7&#x000a;&#x0009;C31.content = n1&#x000a;&#x0009;C32.content = n3&#x000a;&#x0009;C33.content = n9&#x000a;&#x0009;C34.content = n6&#x000a;&#x0009;C35.content = n5&#x000a;&#x0009;C36.content = n4&#x000a;&#x0009;C37.content = n8&#x000a;&#x0009;C38.content = n2&#x000a;&#x0009;C40.content = n9&#x000a;&#x0009;C41.content = n5&#x000a;&#x0009;C42.content = n6&#x000a;&#x0009;C43.content = n2&#x000a;&#x0009;C44.content = n8&#x000a;&#x0009;C45.content = n4&#x000a;&#x0009;C46.content = n3&#x000a;&#x0009;C47.content = n7&#x000a;&#x0009;C48.content = n1&#x000a;&#x0009;C50.content = n8&#x000a;&#x0009;C51.content = n4&#x000a;&#x0009;C52.content = n2&#x000a;&#x0009;C53.content = n3&#x000a;&#x0009;C54.content = n7&#x000a;&#x0009;C55.content = n1&#x000a;&#x0009;C56.content = n9&#x000a;&#x0009;C57.content = n5&#x000a;&#x0009;C58.content = n6&#x000a;&#x0009;C60.content = n5&#x000a;&#x0009;C61.content = n3&#x000a;&#x0009;C62.content = n7&#x000a;&#x0009;C63.content = n4&#x000a;&#x0009;C64.content = n2&#x000a;&#x0009;C65.content = n6&#x000a;&#x0009;C66.content = n8&#x000a;&#x0009;C67.content = n1&#x000a;&#x0009;C68.content = n9&#x000a;&#x0009;C70.content = n2&#x000a;&#x0009;C71.content = n6&#x000a;&#x0009;C72.content = n1&#x000a;&#x0009;C73.content = n7&#x000a;&#x0009;C74.content = n9&#x000a;&#x0009;C75.content = n8&#x000a;&#x0009;C76.content = n5&#x000a;&#x0009;C77.content = n3&#x000a;&#x0009;C78.content = n4&#x000a;&#x0009;C80.content = n4&#x000a;&#x0009;C81.content = n9&#x000a;&#x0009;C82.content = n8&#x000a;&#x0009;C83.content = n1&#x000a;&#x0009;C84.content = n5&#x000a;&#x0009;C85.content = n3&#x000a;&#x0009;C86.content = n2&#x000a;&#x0009;C87.content = n6&#x000a;&#x0009;C88.content = n7&#x000a;}&#x000a;&#x000a;//get the value of a cell&#x000a;fun cellValue (b: board, c: cell): number &#x000a;{&#x000a;&#x0009;cell.content&#x000a;}&#x000a;&#x000a;// A partial game of sudoku with some solutions missing&#x000a;// much like you would see in the newspaper&#x000a;pred partialGame &#x000a;{&#x000a;  C01.content = n2&#x000a;  C02.content = n3&#x000a;  C05.content = n8&#x000a;  C07.content = n5&#x000a;  C11.content = n8&#x000a;  C13.content = n9&#x000a;  C16.content = n4&#x000a;  C17.content = n7&#x000a;  C23.content = n5&#x000a;  C31.content = n9&#x000a;  C32.content = n1&#x000a;  C34.content = n3&#x000a;  C43.content = n8&#x000a;  C46.content = n5&#x000a;  C48.content = n6&#x000a;  C55.content = n4&#x000a;  C64.content = n6&#x000a;  C70.content = n7&#x000a;  C72.content = n9&#x000a;  C74.content = n8&#x000a;  C78.content = n5&#x000a;  C80.content = n6&#x000a;  C85.content = n2&#x000a;  C86.content = n3&#x000a;  C88.content = n8&#x000a;}&#x000a;&#x000a;pred solvePuzzle &#x000a;{&#x000a;}&#x000a;&#x000a;pred validCells&#x000a;{&#x000a;}&#x000a;&#x000a; assert solve {&#x000a;&#x0009;partialGame and solvePuzzle =&gt; validCells&#x000a;}&#x000a;&#x000a;pred show &#x000a;{&#x000a;&#x0009;partialGame&#x000a;&#x000a;}&#x000a;run Game2 for 9&#x000a;&#x000a;"/>
+
+<source filename="\$alloy4$\models\util\integer.als" content="module util/integer&#x000a;&#x000a;/*&#x000a; * A collection of utility functions for using Integers in Alloy.&#x000a; * Note that integer overflows are silently truncated to the current bitwidth&#x000a; * using the 2&apos;s complement arithmetic, unless the &quot;forbid overfows&quot; option is&#x000a; * turned on, in which case only models that don&apos;t have any overflows are &#x000a; * analyzed. &#x000a; */&#x000a;&#x000a;fun add  [n1, n2: Int] : Int { this/plus[n1, n2] }&#x000a;fun plus [n1, n2: Int] : Int { n1 fun/add n2 }&#x000a;&#x000a;fun sub   [n1, n2: Int] : Int { this/minus[n1, n2] }&#x000a;fun minus [n1, n2: Int] : Int { n1 fun/sub n2 }&#x000a;&#x000a;fun mul [n1, n2: Int] : Int { n1 fun/mul n2 }&#x000a;&#x000a;/**&#x000a; * Performs the division with &quot;round to zero&quot; semantics, except the following 3 cases&#x000a; * 1) if a is 0, then it returns 0&#x000a; * 2) else if b is 0, then it returns 1 if a is negative and -1 if a is positive&#x000a; * 3) else if a is the smallest negative integer, and b is -1, then it returns a&#x000a; */&#x000a;fun div [n1, n2: Int] : Int { n1 fun/div n2 }&#x000a;&#x000a;/** answer is defined to be the unique integer that satisfies &quot;a = ((a/b)*b) + remainder&quot; */&#x000a;fun rem [n1, n2: Int] : Int { n1 fun/rem n2 }&#x000a;&#x000a;/** negate */&#x000a;fun negate [n: Int] : Int { 0 fun/sub n }&#x000a;&#x000a;/** equal to */&#x000a;pred eq [n1, n2: Int] { int[n1] = int[n2] }&#x000a;&#x000a;/** greater than */&#x000a;pred gt [n1, n2: Int] { n1 &gt; n2 }&#x000a;&#x000a;/** less then */&#x000a;pred lt [n1, n2: Int] { n1 &lt; n2 }&#x000a;&#x000a;/** greater than or equal */&#x000a;pred gte [n1, n2: Int] { n1 &gt;= n2 }&#x000a;&#x000a;/** less than or equal */&#x000a;pred lte [n1, n2: Int] { n1 &lt;= n2 }&#x000a;&#x000a;/** integer is zero */&#x000a;pred zero [n: Int] { n = 0 }&#x000a;&#x000a;/** positive */&#x000a;pred pos  [n: Int] { n &gt; 0 }&#x000a;&#x000a;/** negative */&#x000a;pred neg  [n: Int] { n &lt; 0 }&#x000a;&#x000a;/** non-positive */&#x000a;pred nonpos [n: Int] { n &lt;= 0 }&#x000a;&#x000a;/** non-negative */&#x000a;pred nonneg [n: Int] { n &gt;= 0 }&#x000a;&#x000a;/** signum (aka sign or sgn) */&#x000a;fun signum [n: Int] : Int { n&lt;0 =&gt; (0 fun/sub 1) else (n&gt;0 =&gt; 1 else 0) }&#x000a;&#x000a;/**&#x000a; * returns the ith element (zero-based) from the set s&#x000a; * in the ordering of &apos;next&apos;, which is a linear ordering&#x000a; * relation like that provided by util/ordering&#x000a; */&#x000a;fun int2elem[i: Int, next: univ-&gt;univ, s: set univ] : lone s {&#x000a;  {e: s | #^next.e = int i }&#x000a;}&#x000a;&#x000a;/**&#x000a; * returns the index of the element (zero-based) in the&#x000a; * ordering of next, which is a linear ordering relation&#x000a; * like that provided by util/ordering&#x000a; */&#x000a;fun elem2int[e: univ, next: univ-&gt;univ] : lone Int {&#x000a;  Int[#^next.e]&#x000a;}&#x000a;&#x000a;/** returns the largest integer in the current bitwidth */&#x000a;fun max:one Int { fun/max }&#x000a;&#x000a;/** returns the smallest integer in the current bitwidth */&#x000a;fun min:one Int { fun/min }&#x000a;&#x000a;/** maps each integer (except max) to the integer after it */&#x000a;fun next:Int-&gt;Int { fun/next }&#x000a;&#x000a;/** maps each integer (except min) to the integer before it */&#x000a;fun prev:Int-&gt;Int { ~next }&#x000a;&#x000a;/** given a set of integers, return the largest element */&#x000a;fun max [es: set Int]: lone Int { es - es.^prev }&#x000a;&#x000a;/** given a set of integers, return the smallest element */&#x000a;fun min [es: set Int]: lone Int { es - es.^next }&#x000a;&#x000a;/** given an integer, return all integers prior to it */&#x000a;fun prevs [e: Int]: set Int { e.^prev }&#x000a;&#x000a;/** given an integer, return all integers following it */&#x000a;fun nexts [e: Int]: set Int { e.^next }&#x000a;&#x000a;/** returns the larger of the two integers */&#x000a;fun larger [e1, e2: Int]: Int { let a=int[e1], b=int[e2] | (a&lt;b =&gt; b else a) }&#x000a;&#x000a;/** returns the smaller of the two integers */&#x000a;fun smaller [e1, e2: Int]: Int { let a=int[e1], b=int[e2] | (a&lt;b =&gt; a else b) }&#x000a;"/>
+
+</alloy>
