@@ -92,6 +92,12 @@ fact {
   M77.cells = C66 + C67 + C68 + C76 + C77 + C78 + C86 + C87 + C88
 }
  
+fact {
+	all c, c': Cell | some row: Row | c in row.cells and c' in row.cells => c.content != c'.content
+	all c, c': Cell | some col: Column | c in col.cells and c' in col.cells => c.content != c'.content
+	all c, c': Cell | some mat: Matrix | c in mat.cells and c' in mat.cells => c.content != c'.content
+}
+
 assert EachCellBelongsToJustOneRow {
   all cell: Cell | one row: Row | cell in row.cells
 }
@@ -106,6 +112,10 @@ assert EachCellBelongsToJustOneMatrix {
   all cell: Cell | one matrix: Matrix | cell in matrix.cells
 }
 //check EachCellBelongsToJustOneMatrix
+
+assert EachCellBelongsToOneBoard {
+	all cell: Cell | one board: SudokuBoard | cell in board.cells
+}
  
 // * 2 3 * * 8 * 5 *
 // * 8 * 9 * * 4 7 *
@@ -116,7 +126,12 @@ assert EachCellBelongsToJustOneMatrix {
 // * * * * 6 * * * *
 // 7 * 9 * 8 * * * 5
 // 6 * * * * 2 3 * 8
-fact {
+fun cellValue (b: SudokuBoard, c: Cell): Digit {
+	Cell.content
+}
+
+
+pred generatePuzzle {
   C01.content = Two
   C02.content = Three
   C05.content = Eight
@@ -143,7 +158,18 @@ fact {
   C86.content = Three
   C88.content = Eight
 }
- 
-pred show {}
-run show
 
+pred solvePuzzle {
+}
+
+pred validCells{
+}
+
+ assert solve {
+	generatePuzzle and solvePuzzle => validCells
+}
+
+pred show {
+	generatePuzzle}
+run generatePuzzle for 9
+//check EachCellBelongsToJustOneRow for 9
