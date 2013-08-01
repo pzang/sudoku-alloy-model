@@ -43,9 +43,21 @@ All cells should be in the board's rows and all cells should be in the board's c
 
 Also the cells inside of the rows should be the same cells inside of the columns and should be the same cells inside the squares.
 
-3
+3) The functions defined are: 
+inRow(r: Row, c: Cell) : return a Boolean signature, and if the Cell c is in Row r, return True signature, else return False signature. 
 
-4
+inCol(co: Column, c: Cell) : return a Boolean signature, if the Cell c is in Column co, return True signature, else return False signature.
+
+inMat(m: Matrix, c: Cell) : return a Boolean signature, if the Cell c is in Matrix m, return True signature, else return False signature.
+
+These functions are used in predicate "show" and assert validCells to validate the content of a cell should not be the same as the content of another Cell which is either in the same Row or same Column or same Matrix. 
+
+
+4) The predicates are: 
+pred generatePuzzle : it generates a set of sudoku puzzle with some cells filled in. It is a context for the game to run, and it is put into the main predicate "show".
+
+pred show:  it initialize the context of the puzzle, and tests some cases to see if the cell content is valid. It's also used to run and show the diagram.
+
 
 5
 

@@ -169,9 +169,9 @@ fun inCol(co: Column, c: Cell): Boolean { c in co.cells => True else False }
 fun inMat(m: Matrix, c: Cell): Boolean { c in m.cells => True else False }
 
 assert validCells{
-	all c, c': Cell, r: Row | inRow[r, c] = True and inRow[r, c']  = True => c.content != c'.content
-	all c, c': Cell, co: Column | inCol[co, c]  = True and inCol[co, c'] = True => c.content != c'.content
-	all c, c': Cell, m: Matrix | inMat[m, c] = True and inMat[m, c'] = True => c.content != c'.content
+	all disj c, c': Cell, r: Row | inRow[r, c] = True and inRow[r, c']  = True => c.content != c'.content
+	all disj c, c': Cell, co: Column | inCol[co, c]  = True and inCol[co, c'] = True => c.content != c'.content
+	all disj c, c': Cell, m: Matrix | inMat[m, c] = True and inMat[m, c'] = True => c.content != c'.content
 }
 
 pred show {
@@ -183,11 +183,12 @@ pred show {
 	inMat[M77, C66] = True
 	inMat[M77, C60] = False
  }
+
+check EachCellBelongsToOneBoard
+check CellContentInRowColumnMatrix
 check validCells 
 check EachCellBelongsToJustOneRow
 check EachCellBelongsToJustOneColumn
-check EachCellBelongsToOneBoard
-check CellContentInRowColumnMatrix
 
 run show for 9
 //check EachCellBelongsToJustOneRow for 9
