@@ -18,7 +18,7 @@ one sig SudokuBoard extends Group {
 	rows: set Row,
 	columns: set Column,
 	squares: set Matrix,
-	inRow: Cell -> Row
+
 } 
 {
 	rows = R0 + R1 + R2 + R3 + R4 + R5 + R6 + R7 + R8
@@ -164,23 +164,30 @@ pred generatePuzzle {
 	
 }
 
-pred solvePuzzle {
-}
+fun inRow(r: Row, c: Cell): Boolean {c in r.cells => True else False}
+fun inCol(co: Column, c: Cell): Boolean { c in co.cells => True else False }
+fun inMat(m: Matrix, c: Cell): Boolean { c in m.cells => True else False }
 
-pred validCells{
-
-}
-
-fun ininRow(r: Row, c: Cell): Boolean {if c in r.cells then True else False}
-
- assert solve {
-	generatePuzzle and solvePuzzle => validCells
+assert validCells{
+	all c, c': Cell, r: Row | inRow[r, c] = True and inRow[r, c']  = True => c.content != c'.content
+	all c, c': Cell, co: Column | inCol[co, c]  = True and inCol[co, c'] = True => c.content != c'.content
+	all c, c': Cell, m: Matrix | inMat[m, c] = True and inMat[m, c'] = True => c.content != c'.content
 }
 
 pred show {
 	generatePuzzle
-	ininRow(R0, C01) = True
+	inRow[R0, C05] = True
+	inRow[R0, C15] = False
+	inCol[C5, C85] = True
+	inCol[C8, C83] = False
+	inMat[M77, C66] = True
+	inMat[M77, C60] = False
  }
-run show for 7
+check validCells 
+check EachCellBelongsToJustOneRow
+check EachCellBelongsToJustOneColumn
+check EachCellBelongsToOneBoard
+check CellContentInRowColumnMatrix
 
+run show for 9
 //check EachCellBelongsToJustOneRow for 9
