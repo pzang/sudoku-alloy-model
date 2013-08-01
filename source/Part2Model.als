@@ -1,8 +1,11 @@
+module SudokuBoard
 abstract sig Digit {}
 one sig One, Two, Three, Four, Five, Six, Seven, Eight, Nine extends Digit {}
  
 sig Cell {content: Digit}
- 
+abstract sig Boolean {}
+one sig True, False extends Boolean {}
+
 abstract sig Group {
   cells: set Cell
 } {
@@ -14,7 +17,8 @@ abstract sig Row, Column, Matrix extends Group {}
 one sig SudokuBoard extends Group {
 	rows: set Row,
 	columns: set Column,
-	squares: set Matrix
+	squares: set Matrix,
+	inRow: Cell -> Row
 } 
 {
 	rows = R0 + R1 + R2 + R3 + R4 + R5 + R6 + R7 + R8
@@ -117,6 +121,9 @@ assert EachCellBelongsToOneBoard {
 	all cell: Cell | one board: SudokuBoard | cell in board.cells
 }
  
+assert CellContentInRowColumnMatrix {
+	
+}
 // * 2 3 * * 8 * 5 *
 // * 8 * 9 * * 4 7 *
 // * * * 5 * * * * *
@@ -126,9 +133,6 @@ assert EachCellBelongsToOneBoard {
 // * * * * 6 * * * *
 // 7 * 9 * 8 * * * 5
 // 6 * * * * 2 3 * 8
-fun cellValue (b: SudokuBoard, c: Cell): Digit {
-	Cell.content
-}
 
 
 pred generatePuzzle {
@@ -157,19 +161,26 @@ pred generatePuzzle {
   C85.content = Two
   C86.content = Three
   C88.content = Eight
+	
 }
 
 pred solvePuzzle {
 }
 
 pred validCells{
+
 }
+
+fun ininRow(r: Row, c: Cell): Boolean {if c in r.cells then True else False}
 
  assert solve {
 	generatePuzzle and solvePuzzle => validCells
 }
 
 pred show {
-	generatePuzzle}
-run generatePuzzle for 9
+	generatePuzzle
+	ininRow(R0, C01) = True
+ }
+run show for 7
+
 //check EachCellBelongsToJustOneRow for 9
