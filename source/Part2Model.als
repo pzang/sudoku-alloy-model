@@ -3,6 +3,7 @@ abstract sig Digit {}
 one sig One, Two, Three, Four, Five, Six, Seven, Eight, Nine extends Digit {}
  
 sig Cell {content: Digit}
+
 abstract sig Boolean {}
 one sig True, False extends Boolean {}
 
@@ -121,9 +122,7 @@ assert EachCellBelongsToOneBoard {
 	all cell: Cell | one board: SudokuBoard | cell in board.cells or cell in board.rows.cells
 }
  
-assert CellContentInRowColumnMatrix {
-	
-}
+
 // * 2 3 * * 8 * 5 *
 // * 8 * 9 * * 4 7 *
 // * * * 5 * * * * *

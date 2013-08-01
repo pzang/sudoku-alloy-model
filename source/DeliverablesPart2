@@ -14,6 +14,14 @@ one sig SudokuBoard extends Group {
 
 The 3 facts here are used to define the addition of a board to the model and should be facts instead of assertions because they describe the structure of the model.
 
+fact {
+		all c, c': Cell | some row: Row | c in row.cells and c' in row.cells => c.content != c'.content
+			all c, c': Cell | some col: Column | c in col.cells and c' in col.cells => c.content != c'.content
+				all c, c': Cell | some mat: Matrix | c in mat.cells and c' in mat.cells => c.content != c'.content
+}
+
+This fact is to describe the assumptions that for any two cells in the same row, column, or matrix the contents should not be the same.
+
 2) Specify at least two assertions that you expect to be true. If the assertions fail,
 please visualize the counterexamples and try to fix your model so the assertions
 hold. (20 points)
@@ -38,10 +46,39 @@ assert noStrayBoardCells {
 // End Cell Assert 
 // End Added Asserts
 
+assert validCells{
+		all disj c, c': Cell, r: Row | inRow[r, c] = True and inRow[r, c']  = True => c.content != c'.content
+			all disj c, c': Cell, co: Column | inCol[co, c]  = True and inCol[co, c'] = True => c.content != c'.content
+				all disj c, c': Cell, m: Matrix | inMat[m, c] = True and inMat[m, c'] = True => c.content != c'.content
+}
+
 These assertions describe attributes that should hold based on our definition of the model.
 All cells should be in the board's rows and all cells should be in the board's columns and all cells should be in the boards squares.
 
 Also the cells inside of the rows should be the same cells inside of the columns and should be the same cells inside the squares.
+
+The validCells assertion checks if there are two cells exists such that when they belongs to the same row, column or matrix, their contents are the same. The desired feature of the model should not exist such a case, so the evaluation of c.content != c'.content should be true. 
+
+assert EachCellBelongsToJustOneRow {
+	  all cell: Cell | one row: Row | cell in row.cells
+}
+//check EachCellBelongsToJustOneRow
+ 
+ assert EachCellBelongsToJustOneColumn {
+	   all cell: Cell | one column: Column | cell in column.cells
+ }
+ //check EachCellBelongsToJustOneColumn
+  
+  assert EachCellBelongsToJustOneMatrix {
+	    all cell: Cell | one matrix: Matrix | cell in matrix.cells
+  }
+  //check EachCellBelongsToJustOneMatrix
+
+  assert EachCellBelongsToOneBoard {
+	  	all cell: Cell | one board: SudokuBoard | cell in board.cells or cell in board.rows.cells
+  }
+   
+These assertions are used to verify each cell belongs to only one row, column or matrix.
 
 3) The functions defined are: 
 inRow(r: Row, c: Cell) : return a Boolean signature, and if the Cell c is in Row r, return True signature, else return False signature. 
