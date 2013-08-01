@@ -118,7 +118,7 @@ assert EachCellBelongsToJustOneMatrix {
 //check EachCellBelongsToJustOneMatrix
 
 assert EachCellBelongsToOneBoard {
-	all cell: Cell | one board: SudokuBoard | cell in board.cells
+	all cell: Cell | one board: SudokuBoard | cell in board.cells or cell in board.rows.cells
 }
  
 assert CellContentInRowColumnMatrix {
@@ -184,11 +184,16 @@ pred show {
 	inMat[M77, C60] = False
  }
 
-check EachCellBelongsToOneBoard
-check CellContentInRowColumnMatrix
+run show for 9
+
 check validCells 
 check EachCellBelongsToJustOneRow
 check EachCellBelongsToJustOneColumn
+check EachCellBelongsToOneBoard
+check CellContentInRowColumnMatrix
+check boardRowsContainAllCells
+check boardColumnsContainAllCells
+check boardSquaresContainAllCells
+check noStrayBoardCells
 
-run show for 9
 //check EachCellBelongsToJustOneRow for 9
