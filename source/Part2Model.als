@@ -364,5 +364,5 @@ pred show
 	partialGame
 
 }
-run partialGame for 9
+run show for 1
 
