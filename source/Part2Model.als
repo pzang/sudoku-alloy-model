@@ -364,5 +364,5 @@ pred show
 	partialGame
 
 }
-run show for 1
+run show for 10 row, 10 column, 10 square9, 81 cell 
 
